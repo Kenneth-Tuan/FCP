@@ -11,8 +11,23 @@ export default defineConfig({
     ],
   ],
   theme: {
-    colors: {},
-    fontFamily: {},
+    colors: {
+      fcp: {
+        black: "#3e3e40",
+        blue: "#6c8994",
+        green: "#aec9c2",
+        yellow: "#efbf81",
+        gray: "#f2f2f2",
+      },
+    },
+    fontFamily: {
+      bold: "GSG-Bold",
+      heavy: "GSG-Heavy",
+      light: "GSG-Light",
+      Medium: "GSG-Medium",
+      regular: "GSG-Regular",
+      unbounded: "unbounded",
+    },
     breakpoints: {
       sm: "320px",
       md: "640px",
