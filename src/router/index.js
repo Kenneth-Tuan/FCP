@@ -1,34 +1,18 @@
 import { createWebHistory, createRouter } from "vue-router";
 
-import LandingPage from "@/App.vue";
-import { i18n, updateLang } from "@/locales/index";
-
-import DefaultLayout from "@/layouts/DefaultLayout.vue";
-
-const {
-  global: { availableLocales, fallbackLocale },
-} = i18n;
+import Main from "@/page/Main/Main.vue";
 
 const routes = [
   {
     path: "/",
     redirect: {
-      name: "landingPage",
-      params: { lang: fallbackLocale.value },
+      name: "Main",
     },
   },
   {
-    path: "/:lang",
-    children: [
-      {
-        path: "nhecc",
-        name: "landingPage",
-        component: LandingPage,
-        meta: {
-          layout: DefaultLayout,
-        },
-      },
-    ],
+    path: "/main",
+    name: "Main",
+    component: Main,
   },
 ];
 
@@ -47,41 +31,6 @@ const router = createRouter({
 });
 
 router.beforeEach(async (to, from, next) => {
-  //   const userStore = useUserStore();
-  //   const { getToken, signIn, fetchUserProfile } = userStore;
-  //   const { isUserProfileFetched } = storeToRefs(userStore);
-
-  //   const miscStore = useMiscStore();
-  //   const { redirectToLoginPage } = miscStore;
-
-  const {
-    params: { lang },
-  } = to;
-  //   const token = getToken();
-
-  // adjust locale
-  // if (!availableLocales.includes(lang)) {
-  //   console.error(
-  //     `invalid lang in url, redirect to fallback locale:${fallbackLocale.value}`
-  //   );
-  //   next(`${fallbackLocale.value}/nhecc/`);
-  // } else {
-  //   updateLang(lang);
-  // }
-
-  //   if (!token) {
-  //     if (import.meta.env.DEV) {
-  //       await signIn();
-  //     } else {
-  //       redirectToLoginPage();
-  //       return;
-  //     }
-  //   }
-
-  //   if (!isUserProfileFetched.value) {
-  //     await fetchUserProfile();
-  //   }
-
   next();
 });
 
