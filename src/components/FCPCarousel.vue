@@ -6,8 +6,6 @@
       transition-next="jump-left"
       swipeable
       animated
-      :autoplay="3000"
-      infinite
       control-color="black"
       prev-icon="arrow_left"
       next-icon="arrow_right"
@@ -16,25 +14,24 @@
       padding
       arrows
       height="auto"
-      class=""
     >
       <q-carousel-slide
         name="style"
         class="u-p-0 u-flex u-flex-row u-justify-center u-items-center"
       >
-        <img :src="banner1" alt="" srcset="" class="u-w-1280px" />
+        <img :src="banner1" alt="" srcset="" class="u-w-100%" />
       </q-carousel-slide>
       <q-carousel-slide
         name="tv"
         class="u-p-0 u-flex u-flex-row u-justify-center u-items-center"
       >
-        <img :src="banner2" alt="" srcset="" class="u-w-1280px" />
+        <img :src="banner2" alt="" srcset="" class="u-w-100%" />
       </q-carousel-slide>
       <q-carousel-slide
         name="layers"
         class="u-p-0 u-flex u-flex-row u-justify-center u-items-center"
       >
-        <img :src="banner3" alt="" srcset="" class="u-w-1280px" />
+        <img :src="banner3" alt="" srcset="" class="u-w-100%" />
       </q-carousel-slide>
       <q-carousel-slide
         name="map"

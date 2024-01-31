@@ -15,7 +15,10 @@ export default defineConfig({
       fcp: {
         black: "#3e3e40",
         blue: "#6c8994",
-        green: "#aec9c2",
+        green: {
+          DEFAULT: "#aec9c2",
+          1: "#D6DADB",
+        },
         yellow: "#efbf81",
         gray: "#f2f2f2",
       },
