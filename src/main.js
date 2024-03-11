@@ -9,7 +9,7 @@ import App from "./App.vue";
 import "virtual:uno.css";
 import { i18n } from "@/locales";
 import router from "@/router";
-
+import Vue3Marquee from "vue3-marquee";
 import IconVue from "./components/Icon.vue";
 
 const myApp = createApp(App);
@@ -29,6 +29,8 @@ myApp.use(pinia);
 myApp.use(router);
 
 myApp.use(i18n);
+
+myApp.use(Vue3Marquee);
 
 myApp.component("FCPIcon", IconVue);
 

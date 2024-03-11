@@ -1801,6 +1801,11 @@ vue-router@4:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
+vue3-marquee@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/vue3-marquee/-/vue3-marquee-4.2.0.tgz#7d2d1d3c1b516f11fdc3e7fa59dda6bd85c5425b"
+  integrity sha512-Ij4iyvHZjTHMrsPqblpJjq6TYbEFq3utihUllAOfuy0E6W2QKX1vX4E7e7qV/ShmHbCbG0pljcEDq3y0FtzBGw==
+
 vue@^3.3.11:
   version "3.4.15"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.4.15.tgz#91f979844ffca9239dff622ba4c79c5d5524b88c"
