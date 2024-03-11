@@ -9,10 +9,10 @@
     />
     <div class="">
       <p class="u-c-fcp-blue u-text-48px u-font-heavy u-pl-72px">
-        前綫穆宣工人訓練學校
+        前線穆宣工人訓練學校
       </p>
       <p class="u-c-fcp-blue u-pl-72px u-text-24px">
-        *亦稱”前綫穆宣訓練中心“/穆訓
+        *亦稱「前線穆宣訓練中心」/「穆訓」
       </p>
     </div>
 
@@ -37,13 +37,14 @@
       <div class="u-flex u-flex-col u-justify-between u-items-start u-flex-1">
         <div>
           <p class="u-c-black u-text-24px u-font-bold">
-            <span class="u-c-fcp-blue">裝備</span>並<span class="u-c-fcp-blue"
-              >差派</span
-            >基督的門徒進入穆宣禾場，
+            <span class="u-c-fcp-blue">裝備</span>並<span class="u-c-fcp-blue">
+              差派
+            </span>
+            基督的門徒進入穆宣禾場，
           </p>
           <p class="u-c-black u-text-24px u-font-bold">
-            <span class="u-c-fcp-blue">以愛和尊重</span
-            >邀請穆斯林群體跟隨耶穌基督。
+            <span class="u-c-fcp-blue"> 以愛和尊重 </span>
+            邀請穆斯林群體跟隨耶穌基督。
           </p>
         </div>
 
@@ -70,26 +71,15 @@
       </div>
     </div>
 
-    <div class="u-pl-84px u-relative">
-      <FCPIcon
-        name="FCP-mark(blue)"
-        class="u-w-84px u-h-84px u-absolute u-left--12px u-top--24px"
-      />
-      <div class="u-flex u-flex-row u-flex-nowrap u-items-center">
-        <P class="u-c-fcp-blue u-text-24px u-font-heavy u-mr-24px"
-          >FCP的4大目標</P
-        >
-        <q-separator class="u-flex-1 u-bg-fcp-blue" size="1.5px" />
-      </div>
-      <p class="u-c-white u-text-36px u-lh-36px u-font-unbounded">
-        Our Program Descripion
-      </p>
-    </div>
+    <FCPSubtitle
+      subtitleMsg="FCP的4大目標"
+      description="Our Program Descripion"
+    />
 
     <div class="u-grid u-grid-cols-4 u-grid-gap-36px">
       <div class="u-col-span-1 u-rounded-[72px_0_0_0] u-overflow-hidden">
         <p
-          class="u-text-center u-bg-fcp-yellow u-font-bold u-text-36px u-pb16px"
+          class="u-text-center u-bg-fcp-yellow u-font-bold u-text-32px u-pb16px"
         >
           <img
             :src="PROGRAM_DESCRIPTION_1"
@@ -101,7 +91,7 @@
       </div>
       <div class="u-col-span-1 u-rounded-[72px_0_0_0] u-overflow-hidden">
         <p
-          class="u-text-center u-bg-fcp-yellow u-font-bold u-text-36px u-pb16px"
+          class="u-text-center u-bg-fcp-yellow u-font-bold u-text-32px u-pb16px"
         >
           <img
             :src="PROGRAM_DESCRIPTION_2"
@@ -113,7 +103,7 @@
       </div>
       <div class="u-col-span-1 u-rounded-[72px_0_0_0] u-overflow-hidden">
         <p
-          class="u-text-center u-bg-fcp-yellow u-font-bold u-text-36px u-pb16px"
+          class="u-text-center u-bg-fcp-yellow u-font-bold u-text-32px u-pb16px"
         >
           <img
             :src="PROGRAM_DESCRIPTION_3"
@@ -125,7 +115,7 @@
       </div>
       <div class="u-col-span-1 u-rounded-[72px_0_0_0] u-overflow-hidden">
         <p
-          class="u-text-center u-bg-fcp-yellow u-font-bold u-text-36px u-pb16px"
+          class="u-text-center u-bg-fcp-yellow u-font-bold u-text-32px u-pb16px"
         >
           <img
             :src="PROGRAM_DESCRIPTION_4"
@@ -135,6 +125,26 @@
           突破伊斯蘭處境<br />建立教會
         </p>
       </div>
+    </div>
+
+    <FCPSubtitle
+      subtitleMsg="FCP穆宣工人的培訓特色"
+      description="Why Choose FCP?"
+    />
+
+    <div class="u-flex u-flex-row u-justify-center u-flex-gap-x-24px">
+      <div
+        class="u-w20% u-h0 u-pb20% u-bg-fcp-black u-rounded-25px u-flex u-flex-col u-items-center u-justify-center"
+      >
+        <p class="u-c-fcp-green">
+          <span class="u-text-48px">7</span>
+          <span class="u-text-30px">個月</span>
+        </p>
+        <span class="u-c-white u-text-48px">全時間培訓</span>
+      </div>
+      <div class="u-w20% u-h0 u-pb20% u-bg-fcp-blacku-rounded-25px"></div>
+      <div class="u-w20% u-h0 u-pb20% u-bg-fcp-black u-rounded-25px"></div>
+      <div class="u-w20% u-h0 u-pb20% u-bg-fcp-black u-rounded-25px"></div>
     </div>
   </div>
 </template>
@@ -148,4 +158,5 @@ import PROGRAM_DESCRIPTION_1 from "@/assets/img/Programs-Description-image-1.jpg
 import PROGRAM_DESCRIPTION_2 from "@/assets/img/Programs-Description-image-2.jpg";
 import PROGRAM_DESCRIPTION_3 from "@/assets/img/Programs-Description-image-3.jpg";
 import PROGRAM_DESCRIPTION_4 from "@/assets/img/Programs-Description-image-4.jpg";
+import FCPSubtitle from "./FCPSubtitle.vue";
 </script>
