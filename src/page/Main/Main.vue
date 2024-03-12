@@ -5,7 +5,7 @@
       name="main-content"
       class="u-flex u-flex-row u-justify-center u-items-start u-flex-nowrap u-h100%"
     >
-      <div style="height: 100%; width: max-content">
+      <!-- <div style="height: 100%; width: max-content">
         <Vue3Marquee
           :vertical="true"
           :gradient="true"
@@ -23,7 +23,7 @@
             Visioning &#8226; Partnering &#8226; Fulfilling &#8226;
           </span>
         </Vue3Marquee>
-      </div>
+      </div> -->
       <section class="u-w-100%">
         <MainDescription />
         <FCPSchoolInfo />
