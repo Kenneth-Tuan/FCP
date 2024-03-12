@@ -134,17 +134,20 @@
 
     <div class="u-flex u-flex-row u-justify-center u-flex-gap-x-24px">
       <div
-        class="u-w20% u-h0 u-pb20% u-bg-fcp-black u-rounded-25px u-flex u-flex-col u-items-center u-justify-center"
+        v-for="item in contentOfWhyChooseFcp"
+        :key="item.month"
+        class="u-w20% u-p24px u-aspect-ratio-1 u-bg-fcp-black u-rounded-25px u-flex u-flex-col u-items-center u-justify-start"
       >
         <p class="u-c-fcp-green">
-          <span class="u-text-48px">7</span>
+          <span class="u-text-48px">{{ item.month }}</span>
           <span class="u-text-30px">個月</span>
         </p>
-        <span class="u-c-white u-text-48px">全時間培訓</span>
+        <span
+          class="u-c-white u-text-48px u-text-center"
+          v-html="item.description"
+        >
+        </span>
       </div>
-      <div class="u-w20% u-h0 u-pb20% u-bg-fcp-blacku-rounded-25px"></div>
-      <div class="u-w20% u-h0 u-pb20% u-bg-fcp-black u-rounded-25px"></div>
-      <div class="u-w20% u-h0 u-pb20% u-bg-fcp-black u-rounded-25px"></div>
     </div>
   </div>
 </template>
@@ -159,4 +162,23 @@ import PROGRAM_DESCRIPTION_2 from "@/assets/img/Programs-Description-image-2.jpg
 import PROGRAM_DESCRIPTION_3 from "@/assets/img/Programs-Description-image-3.jpg";
 import PROGRAM_DESCRIPTION_4 from "@/assets/img/Programs-Description-image-4.jpg";
 import FCPSubtitle from "./FCPSubtitle.vue";
+
+const contentOfWhyChooseFcp = [
+  {
+    month: "7",
+    description: "全時間<br />培訓",
+  },
+  {
+    month: "4",
+    description: "課程<br />訓練",
+  },
+  {
+    month: "2",
+    description: "海外<br />實習",
+  },
+  {
+    month: "1",
+    description: "回顧<br />加強",
+  },
+];
 </script>
