@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 
 import Main from "@/page/Main/Main.vue";
 import Events from "@/page/Events/Index.vue";
+import Programs from "@/page/Programs/Index.vue";
 
 import ContactUs from "@/page/ContactUs/Index.vue";
 
@@ -26,6 +27,11 @@ const routes = [
     path: "/contact-us",
     name: "ContactUs",
     component: ContactUs,
+  },
+  {
+    path: "/programs",
+    name: "Programs",
+    component: Programs,
   },
   {
     path: "/:pathMatch(.*)*",
