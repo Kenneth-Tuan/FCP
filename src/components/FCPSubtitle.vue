@@ -12,12 +12,14 @@ const props = defineProps({
       class="u-w-84px u-h-84px u-absolute u-left--12px u-top--24px"
     />
     <div class="u-flex u-flex-row u-flex-nowrap u-items-center">
-      <P class="u-c-fcp-blue u-text-24px u-font-heavy u-mr-24px">
+      <P
+        class="u-c-fcp-blue u-text-24px u-font-heavy u-mr-24px u-tracking-0.3em"
+      >
         {{ subtitleMsg }}
       </P>
       <q-separator class="u-flex-1 u-bg-fcp-blue" size="1.5px" />
     </div>
-    <p class="u-c-white u-text-36px u-lh-36px u-font-unbounded">
+    <p class="u-c-gray u-text-32px u-lh-24px u-font-heavy">
       {{ description }}
     </p>
   </div>
