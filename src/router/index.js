@@ -3,6 +3,8 @@ import { createWebHistory, createRouter } from "vue-router";
 import Main from "@/page/Main/Main.vue";
 import Events from "@/page/Events/Index.vue";
 
+import ContactUs from "@/page/ContactUs/Index.vue";
+
 const routes = [
   {
     path: "/",
@@ -19,6 +21,17 @@ const routes = [
     path: "/events",
     name: "Events",
     component: Events,
+  },
+  {
+    path: "/contact-us",
+    name: "ContactUs",
+    component: ContactUs,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: {
+      name: "Main",
+    },
   },
 ];
 
