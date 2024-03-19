@@ -18,7 +18,7 @@
         class="u-mb36px"
       />
 
-      <KCarousel :items="main">
+      <KCarousel class="u-mb120px" :items="main">
         <!-- <template #item="{ cn, en, icon }"> // for testing
           <div class="item">
             <div class="">
@@ -33,7 +33,9 @@
           </div>
         </template> -->
         <template #item="{ title, en, icon, description, index }">
-          <div class="u-relative u-h400px">
+          <div
+            class="u-relative u-h400px u-flex u-flex-row u-justify-end u-items-start"
+          >
             <div
               class="u-absolute u-top-0 u-left-0 u-bg-fcp-yellow u-w30% u-aspect-ratio-1 u-z-1 u-flex u-flex-col u-justify-center u-items-center u-rounded-[0_30%_0_30%]"
             >
@@ -54,66 +56,214 @@
                 }}</span>
               </div>
             </div>
-            <div class="u-bottom-0 u-right-0 u-bg-fcp-green u-w80%">
-              <p>
-                <q-separator class="u-bg-fcp-yellow" size="3px" vertical />
-                <span>
+            <div
+              class="u-h400px u-mt60px u-pl180px u-pt48px u-pr24px u-pb24px u-bg-fcp-gray u-w80% u-rounded-[0_0_0_60px] u-overflow-hidden"
+            >
+              <p
+                class="u-flex u-flex-row u-justify-start u-items-center u-mb24px"
+              >
+                <q-separator
+                  class="u-bg-fcp-yellow u-mr16px"
+                  size="8px"
+                  vertical
+                />
+                <span
+                  class="u-text-24px u-c-fcp-blue u-font-unbounded u-fw700 u-tracking-0.05em"
+                >
                   {{ en || "Spiritual Life and Character Formation" }}
                 </span>
               </p>
-              <span>
+              <p class="u-c-fcp-black u-text-24px u-pl24px">
                 {{ description }}
-              </span>
+              </p>
             </div>
           </div>
         </template>
       </KCarousel>
+
+      <div
+        class="u-grid u-grid-cols-2 u-grid-rows-4 u-grid-gap-24px u-items-center u-mb80px"
+      >
+        <div
+          v-for="(item, index) in items"
+          :key="index"
+          class="u-flex u-flex-row u-items-end u-mxauto u-w100% u-group"
+        >
+          <div
+            class="u-mr16px u-text-24px u-lh-24px u-font-unbounded u-fw900 u-c-fcp-gray"
+            :class="{
+              'group-hover:u-c-fcp-yellow  u-transition-all u-duration-300ms u-ease-in-out':
+                'animation',
+            }"
+          >
+            {{ index + 1 }}/
+          </div>
+          <div
+            class="u-flex u-flex-row u-items-center u-px5% u-flex-1"
+            :class="{
+              'u-border-solid u-border-width-[0_0_8px_0] u-border-fcp-gray':
+                'border',
+              'group-hover:u-border-fcp-yellow u-transition-all u-duration-300ms u-ease-in-out':
+                'animation',
+            }"
+          >
+            <component :is="item.icon" class="u-w84px u-h84px u-mr16px" />
+            <div class="u-c-fcp-blue u-flex u-flex-col u-items-start">
+              <span class="u-font-heavy u-tracking-0.2em u-text-24px">{{
+                item.cn || `工人靈命塑造`
+              }}</span>
+              <span class="u-lh-24px">{{
+                item.en || " Spiritual Life and Character Formation"
+              }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <FCPSubtitle
+        subtitleMsg="FCP的學制類別"
+        description="Programs OOffered by FCP"
+        class="u-mb36px"
+      />
+
+      <div class="u-bg-fcp-green u-relative u-rounded-[100px_0_0_0]">
+        <div class="u-pl60px u-py40px">
+          <p class="u-c-white u-text-48px">
+            <span>實體</span>
+            <span class="u-font-bold">全修班</span>
+          </p>
+          <div
+            class="u-flex u-flex-row u-justify-start u-c-white u-flex-gap-x-16px"
+          >
+            <div class="u-flex u-flex-col u-items-center u-justify-center">
+              <span class="u-fw900 u-text-24px">4個月</span>
+              <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
+                專業課程訓練
+              </p>
+            </div>
+
+            <q-separator class="u-bg-fcp-gray" size="1px" vertical />
+
+            <div class="u-flex u-flex-col u-items-center u-justify-center">
+              <span class="u-fw900 u-text-24px">2個月</span>
+              <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
+                專業課程訓練
+              </p>
+            </div>
+
+            <q-separator class="u-bg-fcp-gray" size="1px" vertical />
+
+            <div class="u-flex u-flex-col u-items-center u-justify-center">
+              <span class="u-fw900 u-text-24px">1個月</span>
+              <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
+                專業課程訓練
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="u-w100% u-bg-white u-h16px u-absolute u-z-2 u-bottom-0"
+        ></div>
+      </div>
+
+      <div class="u-flex u-flex-row u-flex-gap-x-16px">
+        <div
+          class="u-bg-fcp-green u-flex-1 u-flex u-flex-row u-justify-end u-rounded-[50px_0_0_0]"
+        >
+          <div class="u-flex u-flex-col u-items-center u-c-white">
+            <p class="u-text-48px">
+              <span>實體</span>
+              <span class="u-font-bold">全修班</span>
+            </p>
+            <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
+              專業課程訓練
+            </p>
+            <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
+              專業課程訓練
+            </p>
+          </div>
+        </div>
+
+        <div class="u-bg-fcp-green u-flex-1 u-rounded-[50px_0_0_0]">
+          <div class="u-flex u-flex-col u-items-center">
+            <p class="u-c-white u-text-48px">
+              <span>實體</span>
+              <span class="u-font-bold">全修班</span>
+            </p>
+            <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
+              專業課程訓練
+            </p>
+            <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
+              專業課程訓練
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { computed, defineAsyncComponent } from "vue";
+
 import FCPSubtitle from "@/components/FCPSubtitle.vue";
 import Banner from "@/assets/img/programs/programs_page.png";
 import KCarousel from "@/components/KCarousel.vue";
 
-const items = [
+const items = computed(() => [
   {
     cn: "工人靈命塑造",
     en: "Spiritial Life and Character Formation",
-    icon: "FCP-icon-Spiritual Life and Character Formation",
+    icon: defineAsyncComponent(() =>
+      import(
+        "@/assets/icons/FCP-icon-Spiritual Life and Character Formation.svg"
+      )
+    ),
   },
   {
     cn: "跨文化認識",
     en: "Understanding Cross Cultural Mission",
-    icon: "FCP-icon-Understanding Cross Cultural Mission",
+    icon: defineAsyncComponent(() =>
+      import("@/assets/icons/FCP-icon-Understanding Cross Cultural Mission.svg")
+    ),
   },
   {
     cn: "語言學習與操練",
     en: "Language Learning & Practice",
-    icon: "FCP-icon-Language Learning",
+    icon: defineAsyncComponent(() =>
+      import("@/assets/icons/FCP-icon-Language Learning.svg")
+    ),
   },
   {
     cn: "穆宣事工發展",
     en: "Developing Ministries in the Islamic Context",
-    icon: "FCP-icon-Developing Ministries",
+    icon: defineAsyncComponent(() =>
+      import("@/assets/icons/FCP-icon-Developing Ministries.svg")
+    ),
   },
   {
     cn: "宣教團隊建造",
     en: "Missional team Development and Leadership",
-    icon: "FCP-icon-Missional Team Development",
+    icon: defineAsyncComponent(() =>
+      import("@/assets/icons/FCP-icon-Missional Team Development.svg")
+    ),
   },
   {
     cn: "一對一教練",
     en: "Diciple Making",
-    icon: "FCP-icon-Disciple Making",
+    icon: defineAsyncComponent(() =>
+      import("@/assets/icons/FCP-icon-Disciple Making.svg")
+    ),
   },
   {
     cn: "海外實習",
     en: "Overseas Internship",
-    icon: "FCP-icon-Overseas internship",
+    icon: defineAsyncComponent(() =>
+      import("@/assets/icons/FCP-icon-Overseas internship.svg")
+    ),
   },
-];
+]);
 
 const main = [
   {

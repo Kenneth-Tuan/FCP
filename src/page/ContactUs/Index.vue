@@ -30,6 +30,7 @@
           <FCPIcon
             name="location_on_white_48dp"
             class="u-c-white u-w84px u-h84px"
+            color="#fff"
           />
           <p
             class="u-text-36px u-flex u-flex-col u-items-center u-fw900 u-tracking-0.2em"
@@ -51,7 +52,11 @@
             'u-flex u-flex-col u-items-center u-flex-gap-y-16px': 'layout',
           }"
         >
-          <FCPIcon name="phone_white_48dp" class="u-c-white u-w84px u-h84px" />
+          <FCPIcon
+            name="phone_white_48dp"
+            class="u-c-white u-w84px u-h84px"
+            color="#fff"
+          />
           <p
             class="u-text-36px u-flex u-flex-col u-items-center u-fw900 u-tracking-0.2em"
           >
@@ -76,6 +81,7 @@
           <FCPIcon
             name="alternate_email_white_48dp"
             class="u-c-white u-w84px u-h84px"
+            color="#fff"
           />
           <p
             class="u-text-36px u-flex u-flex-col u-items-center u-fw900 u-tracking-0.2em"
@@ -96,7 +102,11 @@
       <div
         class="u-c-fcp-blue u-w70% u-mxauto u-flex u-flex-col u-items-center"
       >
-        <FCPIcon name="question_answer_white_48dp" class="u-w84px u-h84px" />
+        <FCPIcon
+          name="question_answer_white_48dp"
+          color="#6c8994"
+          class="u-w84px u-h84px"
+        />
         <p class="u-text-24px u-fw600 u-tracking-0.2em">留言表單</p>
         <p class="u-text-24px u-fw600 u-tracking-0.2em u-mb24px">MESSAGE US</p>
         <p class="u-mb24px u-tracking-0.2em u-fw600">
