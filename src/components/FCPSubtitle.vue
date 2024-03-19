@@ -19,7 +19,7 @@ const props = defineProps({
       </P>
       <q-separator class="u-flex-1 u-bg-fcp-blue" size="1.5px" />
     </div>
-    <p class="u-c-gray u-text-32px u-lh-24px u-font-heavy">
+    <p class="u-c-gray-1 u-text-32px u-lh-24px u-font-heavy">
       {{ description }}
     </p>
   </div>
