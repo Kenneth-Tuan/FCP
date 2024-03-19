@@ -14,13 +14,13 @@ export default defineConfig({
     colors: {
       fcp: {
         black: "#3e3e40",
-        blue: "#6c8994",
+        blue: { DEFAULT: "#6c8994", 1: "#658997" },
         green: {
           DEFAULT: "#aec9c2",
           1: "#D6DADB",
         },
         yellow: "#efbf81",
-        gray: "#f2f2f2",
+        gray: { DEFAULT: "#f2f2f2", 1: "#d6dadb" },
       },
     },
     fontFamily: {
