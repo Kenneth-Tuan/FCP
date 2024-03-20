@@ -69,7 +69,7 @@ const planingContent = [
         </div>
       </div>
 
-      <FCPButton class="">
+      <FCPButton class="" @click="$router.push({ name: 'Programs' })">
         <div>
           <span class="u-font-bold u-text-30px u-tracking-0.05em">
             看更多内容
