@@ -60,5 +60,24 @@ body {
     text-decoration: none;
     color: inherit;
     line-height: initial;
+    &:link {
+      text-decoration: none;
+    }
+    &:visited {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    &:active {
+      text-decoration: none;
+    }
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .router-link-active {
+    text-decoration: none;
   }
 }

@@ -98,9 +98,9 @@
               Resource
             </p>
             <p
-              class="u-text-28px u-fw-600 u-font-regular u-c-#FFF u-text-right"
+              class="u-text-28px u-fw-600 u-font-regular u-c-#FFF u-text-right u-text-nowrap"
             >
-              影音資源
+              穆宣國度視窗
             </p>
           </div>
         </div>

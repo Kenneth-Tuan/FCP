@@ -2,14 +2,30 @@
   <div
     class="u-flex u-flex-row u-justify-between u-h-72px u-pl-12px u-bg-#3E3E40"
   >
-    <img :src="FCP_LOGO" alt="" srcset="" class="u-cursor-pointer" />
+    <img
+      :src="FCP_LOGO"
+      alt=""
+      srcset=""
+      class="u-cursor-pointer"
+      @click="$router.push({ name: 'Main' })"
+    />
     <div
       class="u-flex u-flex-row u-items-center u-justify-center u-flex-gap-x-48px u-w-100%"
     >
-      <p class="u-c-white u-font-unbounded menuItem">About FCP</p>
-      <p class="u-c-white u-font-unbounded menuItem">Programs</p>
-      <p class="u-c-white u-font-unbounded menuItem">Events</p>
-      <p class="u-c-white u-font-unbounded menuItem">Resources</p>
+      <p class="u-c-white u-font-unbounded menuItem">關於我們</p>
+      <p
+        class="u-c-white u-font-unbounded menuItem"
+        @click="$router.push({ name: 'Programs' })"
+      >
+        FCP 訓練
+      </p>
+      <p
+        class="u-c-white u-font-unbounded menuItem"
+        @click="$router.push({ name: 'Events' })"
+      >
+        最新消息
+      </p>
+      <p class="u-c-white u-font-unbounded menuItem">穆宣國度視窗</p>
     </div>
 
     <div class="u-flex u-flex-row u-justify-center">
