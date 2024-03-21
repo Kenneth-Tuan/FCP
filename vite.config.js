@@ -7,8 +7,11 @@ import svgLoader from "vite-svg-loader";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "fcp",
   plugins: [
-    vue(),
+    vue({
+      template: { transformAssetUrls },
+    }),
     quasar({
       sassVariables: "src/quasar-variables.sass",
     }),
@@ -22,6 +25,29 @@ export default defineConfig({
         replacement: fileURLToPath(new URL("./src", import.meta.url)),
       },
     ],
+  },
+  build: {
+    outDir: "output",
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          // console.log(assetInfo)
+          let extType = assetInfo.name.split(".").at(1);
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+            extType = "img";
+          }
+          return `assets/${extType}/[name]-[hash][extname]`;
+        },
+
+        chunkFileNames: (chunkInfo) => {
+          return `assets/js/[name]-[hash].js`;
+        },
+
+        entryFileNames: (chunkInfo) => {
+          return `assets/js/[name]-[hash].js`;
+        },
+      },
+    },
   },
   css: {
     preprocessorOptions: {
