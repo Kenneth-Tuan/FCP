@@ -3,7 +3,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import Main from "@/page/Main/Main.vue";
 import Events from "@/page/Events/Index.vue";
 import Programs from "@/page/Programs/Index.vue";
-
+import InPersonFullCourse from "@/page/Programs/InPersonFullCourse.vue";
 import ContactUs from "@/page/ContactUs/Index.vue";
 
 const routes = [
@@ -31,7 +31,26 @@ const routes = [
   {
     path: "/programs",
     name: "Programs",
-    component: Programs,
+    children: [
+      {
+        path: "/",
+        name: "Programs",
+        component: Programs,
+      },
+      {
+        path: "In-Person-Full-Course",
+        name: "full_course",
+        component: InPersonFullCourse,
+      },
+      {
+        path: "Online-Elective-Course",
+        name: "online_elective_course",
+      },
+      {
+        path: "Free-Elective-Course",
+        name: "free_elective_course",
+      },
+    ],
   },
   {
     path: "/:pathMatch(.*)*",
