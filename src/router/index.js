@@ -5,6 +5,7 @@ import Events from "@/page/Events/Index.vue";
 import Programs from "@/page/Programs/Index.vue";
 import InPersonFullCourse from "@/page/Programs/InPersonFullCourse.vue";
 import OnlineElectiveCourse from "@/page/Programs/OnlineElectiveCourse.vue";
+import FreeElectiveCourse from "@/page/Programs/FreeElectiveCourse.vue";
 import ContactUs from "@/page/ContactUs/Index.vue";
 
 const routes = [
@@ -51,6 +52,7 @@ const routes = [
       {
         path: "Free-Elective-Course",
         name: "free_elective_course",
+        component: FreeElectiveCourse,
       },
     ],
   },
