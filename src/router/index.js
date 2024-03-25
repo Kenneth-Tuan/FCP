@@ -4,6 +4,7 @@ import Main from "@/page/Main/Main.vue";
 import Events from "@/page/Events/Index.vue";
 import Programs from "@/page/Programs/Index.vue";
 import InPersonFullCourse from "@/page/Programs/InPersonFullCourse.vue";
+import OnlineElectiveCourse from "@/page/Programs/OnlineElectiveCourse.vue";
 import ContactUs from "@/page/ContactUs/Index.vue";
 
 const routes = [
@@ -45,6 +46,7 @@ const routes = [
       {
         path: "Online-Elective-Course",
         name: "online_elective_course",
+        component: OnlineElectiveCourse,
       },
       {
         path: "Free-Elective-Course",

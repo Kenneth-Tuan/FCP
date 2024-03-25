@@ -256,6 +256,49 @@
           </div>
         </div>
       </div>
+
+      <FCPSubtitle
+        subtitleMsg="常見問題"
+        description="F.A.Q."
+        class="u-mb36px"
+      />
+
+      <div class="u-flex u-flex-col u-flex-gap-y-16px u-mb36px">
+        <FAQ />
+        <FAQ />
+        <FAQ />
+        <FAQ />
+      </div>
+
+      <div
+        class="u-w80% u-mxauto u-h300px u-relative u-rounded-[60px_0_0_0] u-overflow-hidden u-mb32px"
+      >
+        <div
+          class="u-w100% u-h100% u-bg-gradient-to-t u-from-white u-to-fcp-blue u-opacity-100"
+        ></div>
+        <div
+          class="u-flex u-flex-col u-items-center u-justify-start u-absolute u-z-1 u-top-25% u-left-25%"
+        >
+          <p
+            class="u-text-center u-tracking-0.1em u-font-bold u-text-18px u-c-fcp-black"
+          >
+            還有更多疑問嗎？
+          </p>
+          <p
+            class="u-text-center u-tracking-0.1em u-font-bold u-text-18px u-c-fcp-black u-mb16px"
+          >
+            歡迎聯繫或留言給我們
+          </p>
+          <q-btn
+            class="u-rounded-[36px_0_36px_0] u-bg-fcp-blue"
+            padding="12px 32px"
+          >
+            <span class="u-c-white u-text-24px u-tracking-0.2em u-font-heavy"
+              >聯絡我們</span
+            >
+          </q-btn>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -264,6 +307,7 @@
 import InPersonFullCoursePoster from "@/assets/img/programs/Programs-1.jpg";
 import FCPSubtitle from "@/components/FCPSubtitle.vue";
 import RegistrationInfoCard from "@/components/RegistrationInfoCard.vue";
+import FAQ from "@/components/FAQ.vue";
 </script>
 
 <style lang="scss" scoped></style>
