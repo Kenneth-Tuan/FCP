@@ -1,5 +1,5 @@
 <template>
-  <div class="u-mxauto u-w1366px">
+  <div class="u-mxauto u-max-w1440px">
     <div class="u-wmax u-hmax u-relative u-mb60px">
       <div class="u-c-fcp-gray u-absolute u-top-45% u-left-10%">
         <p class="u-flex u-flex-row u-items-center u-justify-start">

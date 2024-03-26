@@ -1,6 +1,6 @@
 <template>
-  <div class="u-mxauto u-w1366px">
-    <div class="u-wmax u-hmax u-relative u-mb60px">
+  <div class="u-mxauto u-max-w1440px">
+    <div class="u-w100% u-hmax u-relative u-mb60px">
       <div
         class="u-c-fcp-gray u-absolute u-top-45% u-left-50% u-translate--50%"
       >
@@ -9,7 +9,7 @@
           <q-separator class="u-w100px u-bg-fcp-gray" size="1px" />
         </p>
         <p class="u-flex u-flex-row u-text-48px u-pl24px u-fw900">
-          <span class="u-c-fcp-yellow">綫上</span>
+          <span class="u-c-fcp-yellow">線上</span>
           選課班
         </p>
       </div>
@@ -21,7 +21,7 @@
       >
         <span class="u-c-fcp-blue u-font-bold u-text-36px">申請報名</span>
       </q-btn>
-      <img :src="FreeElectiveCourse" alt="" />
+      <img :src="FreeElectiveCourse" alt="" class="u-w100%" />
     </div>
 
     <div class="u-pl60px">
@@ -136,7 +136,7 @@
           <li>郵寄書面文件至：</li>
           <div class="u-pl25px">
             <p>臺北郵政84-34號信箱</p>
-            <p>(前綫穆宣工人訓練中心 收)</p>
+            <p>(前線穆宣工人訓練中心 收)</p>
           </div>
           <li>報名需繳交文件：</li>
           <div class="u-mb16px u-pl32px">

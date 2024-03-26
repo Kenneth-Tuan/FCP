@@ -25,7 +25,7 @@
 
     <div class="u-flex-1 u-flex u-flex-col u-items-start u-justify-between">
       <span class="u-c-black u-text-28px u-fw600">
-        {{ description || "2024年招生説明會 —— 北部地區（實體&綫上同步）" }}
+        {{ description || "2024年招生説明會 —— 北部地區（實體&線上同步）" }}
       </span>
 
       <div class="u-flex u-flex-row u-flex-gap-16px u-text-24px">

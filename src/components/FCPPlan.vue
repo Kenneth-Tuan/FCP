@@ -92,7 +92,7 @@ const planingContent = [
 
     <div class="u-flex u-flex-row u-w100% u-h600px u-mb24px">
       <div
-        class="u-bg-fcp-blue u-flex-grow u-flex u-flex-col u-justify-between u-px5% u-pt10% u-pb5% u-rounded-[200px_0_0_0] u-h100%"
+        class="u-bg-fcp-blue u-flex-grow u-flex u-flex-col u-justify-between u-px5% u-pt10% u-pb5% u-rounded-[200px_0_0_0] u-w40% u-h100%"
       >
         <span
           class="u-c-fcp-green u-text-60px u-lh-70px u-tracking-0.05em u-font-unbounded"
@@ -109,7 +109,8 @@ const planingContent = [
           </span>
         </p>
       </div>
-      <div class="u-wmax u-hmax">
+
+      <div class="u-w60% u-h100% u-overflow-hidden">
         <img :src="Programs_Offered_image" alt="" />
       </div>
     </div>
@@ -146,7 +147,7 @@ const planingContent = [
 
     <div class="u-flex u-flex-row u-w100% u-h600px u-mb24px">
       <div
-        class="u-bg-fcp-green u-flex-grow u-flex u-flex-col u-justify-between u-px5% u-pt10% u-pb5% u-rounded-[200px_0_0_0] u-h100%"
+        class="u-bg-fcp-green u-flex-grow u-flex u-flex-col u-justify-between u-px5% u-pt10% u-pb5% u-rounded-[200px_0_0_0] u-w40% u-h100%"
       >
         <span
           class="u-c-fcp-blue u-text-60px u-lh-70px u-tracking-0.05em u-font-unbounded"
@@ -163,13 +164,13 @@ const planingContent = [
           </span>
         </p>
       </div>
-      <div class="u-wmax u-hmax">
+      <div class="u-w60% u-h100% u-overflow-hidden">
         <img :src="Teachers_image" alt="" />
       </div>
     </div>
 
     <div class="u-flex u-justify-center">
-      <q-btn padding="12px 16px" outline rounded>
+      <q-btn class="btnSecondStyle" padding="12px 16px" flat rounded>
         <div class="u-flex u-flex-row u-flex-gap-x-8px u-items-center">
           <span class="u-text-24px u-c-fcp-blue">點我了解更多</span>
           <p

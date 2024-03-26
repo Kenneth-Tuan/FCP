@@ -1,6 +1,6 @@
 <template>
-  <div class="u-mxauto u-w1366px">
-    <div class="u-wmax u-hmax u-relative u-mb60px">
+  <div class="u-mxauto u-max-w1440px">
+    <div class="u-w100% u-hmax u-relative u-mb60px">
       <div class="u-c-fcp-gray u-absolute u-top-45% u-left-10%">
         <p class="u-flex u-flex-row u-items-center u-justify-start">
           <span class="u-font-bold u-tracking-0.2em">最新消息&nbsp;</span>
@@ -8,7 +8,8 @@
         </p>
         <span class="u-font-unbounded u-text-22px">EVENTS</span>
       </div>
-      <img :src="Banner" alt="" />
+
+      <img :src="Banner" alt="" class="u-w100%" />
     </div>
 
     <div class="u-pl60px u-mb60px">

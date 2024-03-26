@@ -1,6 +1,6 @@
 <template>
-  <div class="u-mxauto u-w1366px">
-    <div class="u-wmax u-hmax u-relative u-mb60px">
+  <div class="u-mxauto u-max-w1440px">
+    <div class="u-w100% u-hmax u-relative u-mb60px">
       <div
         class="u-c-fcp-gray u-absolute u-top-45% u-left-50% u-translate--50%"
       >
@@ -21,7 +21,7 @@
       >
         <span class="u-c-fcp-blue u-font-bold u-text-36px">申請報名</span>
       </q-btn>
-      <img :src="InPersonFullCoursePoster" alt="" />
+      <img :src="InPersonFullCoursePoster" alt="" class="u-w100%" />
     </div>
 
     <div class="u-pl60px">
@@ -36,7 +36,7 @@
         :description="[
           '招收人數：第一節最多12人',
           '已領受對穆斯林宣教異象，但尚未接受過穆宣訓練者',
-          '希望申請加入前綫差會的工人（非必要條件）',
+          '希望申請加入前線差會的工人（非必要條件）',
         ]"
       >
       </RegistrationInfoCard>
@@ -53,7 +53,7 @@
       >
         <template #remarks>
           <p class="u-text-18px u-font-bold u-pl30px u-pr30px">
-            *如無接受過基礎神學裝備，亦可報考，惟錄取後需參加「學前綫上培訓班」（約2個月，每周1次，酌收服務成本）
+            *如無接受過基礎神學裝備，亦可報考，惟錄取後需參加「學前線上培訓班」（約2個月，每周1次，酌收服務成本）
           </p>
         </template>
       </RegistrationInfoCard>
@@ -219,7 +219,7 @@
           <li>郵寄書面文件至：</li>
           <div class="u-pl25px">
             <p>臺北郵政84-34號信箱</p>
-            <p>(前綫穆宣工人訓練中心 收)</p>
+            <p>(前線穆宣工人訓練中心 收)</p>
           </div>
           <li>報名需繳交文件：</li>
           <div class="u-mb16px u-pl32px">
@@ -300,6 +300,7 @@
             歡迎聯繫或留言給我們
           </p>
           <q-btn
+            @click="$router.push({ name: 'ContactUs' })"
             class="u-rounded-[36px_0_36px_0] u-bg-fcp-blue"
             padding="12px 32px"
           >

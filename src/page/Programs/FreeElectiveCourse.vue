@@ -1,6 +1,6 @@
 <template>
-  <div class="u-mxauto u-w1366px">
-    <div class="u-wmax u-hmax u-relative u-mb60px">
+  <div class="u-mxauto u-max-w1440px">
+    <div class="u-w100% u-hmax u-relative u-mb60px">
       <div
         class="u-c-fcp-gray u-absolute u-top-45% u-left-50% u-translate--50%"
       >
@@ -21,7 +21,7 @@
       >
         <span class="u-c-fcp-blue u-font-bold u-text-36px">申請報名</span>
       </q-btn>
-      <img :src="OnlineElectiveCoursePoster" alt="" />
+      <img :src="OnlineElectiveCoursePoster" alt="" class="u-w100%" />
     </div>
 
     <div class="u-pl60px">

@@ -1,6 +1,6 @@
 <template>
-  <div class="u-mxauto u-w1366px">
-    <div class="u-wmax u-hmax u-relative u-mb60px">
+  <div class="u-mxauto u-max-w1440px">
+    <div class="u-w100% u-hmax u-relative u-mb60px">
       <div class="u-c-fcp-gray u-absolute u-top-45% u-left-10%">
         <p class="u-flex u-flex-row u-items-center u-justify-start">
           <span class="u-font-bold u-tracking-0.2em">訓練介紹&nbsp;</span>
@@ -8,7 +8,9 @@
         </p>
         <span class="u-font-unbounded u-text-22px">PROGRAMS</span>
       </div>
-      <img :src="Banner" alt="" />
+      <div class="u-w100%">
+        <img :src="Banner" alt="" class="u-w100%" />
+      </div>
     </div>
 
     <div class="u-pl60px u-mb60px">
@@ -126,77 +128,148 @@
         class="u-mb36px"
       />
 
-      <div class="u-bg-fcp-green u-relative u-rounded-[100px_0_0_0]">
-        <div class="u-pl60px u-py40px">
-          <p class="u-c-white u-text-48px">
-            <span>實體</span>
-            <span class="u-font-bold">全修班</span>
-          </p>
-          <div
-            class="u-flex u-flex-row u-justify-start u-c-white u-flex-gap-x-16px"
-          >
-            <div class="u-flex u-flex-col u-items-center u-justify-center">
-              <span class="u-fw900 u-text-24px">4個月</span>
-              <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
-                專業課程訓練
-              </p>
-            </div>
-
-            <q-separator class="u-bg-fcp-gray" size="1px" vertical />
-
-            <div class="u-flex u-flex-col u-items-center u-justify-center">
-              <span class="u-fw900 u-text-24px">2個月</span>
-              <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
-                專業課程訓練
-              </p>
-            </div>
-
-            <q-separator class="u-bg-fcp-gray" size="1px" vertical />
-
-            <div class="u-flex u-flex-col u-items-center u-justify-center">
-              <span class="u-fw900 u-text-24px">1個月</span>
-              <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
-                專業課程訓練
-              </p>
-            </div>
-          </div>
-        </div>
-
+      <div class="u-w100% u-flex u-flex-col u-items-center">
         <div
-          class="u-w100% u-bg-white u-h16px u-absolute u-z-2 u-bottom-0"
-        ></div>
-      </div>
-
-      <div class="u-flex u-flex-row u-flex-gap-x-16px">
-        <div
-          class="u-bg-fcp-green u-flex-1 u-flex u-flex-row u-justify-end u-rounded-[50px_0_0_0]"
+          class="u-w960px u-bg-fcp-green u-relative u-rounded-[100px_0_0_0] u-mb24px"
         >
-          <div class="u-flex u-flex-col u-items-center u-c-white">
-            <p class="u-text-48px">
-              <span>實體</span>
-              <span class="u-font-bold">全修班</span>
-            </p>
-            <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
-              專業課程訓練
-            </p>
-            <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
-              專業課程訓練
-            </p>
-          </div>
-        </div>
-
-        <div class="u-bg-fcp-green u-flex-1 u-rounded-[50px_0_0_0]">
-          <div class="u-flex u-flex-col u-items-center">
+          <div class="u-pl60px u-py40px">
             <p class="u-c-white u-text-48px">
               <span>實體</span>
               <span class="u-font-bold">全修班</span>
             </p>
-            <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
-              專業課程訓練
-            </p>
-            <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
-              專業課程訓練
-            </p>
+            <div
+              class="u-flex u-flex-row u-justify-start u-c-white u-flex-gap-x-16px"
+            >
+              <div class="u-flex u-flex-col u-items-center u-justify-center">
+                <span class="u-fw900 u-text-24px">4個月</span>
+                <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
+                  專業課程訓練
+                </p>
+              </div>
+
+              <q-separator class="u-bg-fcp-gray" size="1px" vertical />
+
+              <div class="u-flex u-flex-col u-items-center u-justify-center">
+                <span class="u-fw900 u-text-24px">2個月</span>
+                <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
+                  專業課程訓練
+                </p>
+              </div>
+
+              <q-separator class="u-bg-fcp-gray" size="1px" vertical />
+
+              <div class="u-flex u-flex-col u-items-center u-justify-center">
+                <span class="u-fw900 u-text-24px">1個月</span>
+                <p class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600">
+                  專業課程訓練
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="u-w100% u-bg-white u-h16px u-absolute u-z-2 u-bottom-0"
+          ></div>
+
+          <div
+            class="u-absolute u-bottom-0 u-right-0 u-z-3 u-bg-white u-pt16px u-pl16px u-rounded-[30px_0_0_0]"
+          >
+            <q-btn
+              @click="$router.push({ name: 'full_course' })"
+              class="u-bg-fcp-black u-rounded-[20px_0_20px_0]"
+              padding="10px 18px"
+              flat
+            >
+              <span class="u-c-white u-text-18px u-font-bold u-tracking-0.1em">
+                了解更多
+              </span>
+            </q-btn>
+          </div>
+        </div>
+
+        <div class="u-w960px u-h220px u-flex u-flex-row u-flex-gap-x-32px">
+          <div
+            class="u-bg-fcp-green u-flex-1 u-flex u-flex-row u-justify-end u-rounded-[100px_0_0_0] u-relative"
+          >
+            <div class="u-flex u-flex-col u-items-center u-c-white u-mr24px">
+              <p class="u-text-48px">
+                <span>線上</span>
+                <span class="u-font-bold">選修班</span>
+              </p>
+              <p
+                class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center u-mb12px"
+              >
+                一年兩學期制
+              </p>
+              <p
+                class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center"
+              >
+                訪宣補助
+              </p>
+            </div>
+
+            <div
+              class="u-w100% u-bg-white u-h12px u-absolute u-z-2 u-bottom-0"
+            ></div>
+
+            <div
+              class="u-absolute u-bottom-0 u-right-0 u-z-3 u-bg-white u-pt16px u-pl16px u-rounded-[30px_0_0_0]"
+            >
+              <q-btn
+                @click="$router.push({ name: 'online_elective_course' })"
+                class="u-bg-fcp-black u-rounded-[20px_0_20px_0]"
+                padding="10px 18px"
+                flat
+              >
+                <span
+                  class="u-c-white u-text-18px u-font-bold u-tracking-0.1em"
+                >
+                  了解更多
+                </span>
+              </q-btn>
+            </div>
+          </div>
+
+          <div
+            class="u-bg-fcp-green u-flex-1 u-flex u-flex-row u-justify-end u-rounded-[100px_0_0_0] u-relative"
+          >
+            <div class="u-flex u-flex-col u-items-center u-c-white u-mr24px">
+              <p class="u-c-white u-text-48px">
+                <span>自由</span>
+                <span class="u-font-bold">選課班</span>
+              </p>
+              <p
+                class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center u-mb12px"
+              >
+                無期限學習
+              </p>
+              <p
+                class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center"
+              >
+                隨處隨時進修
+              </p>
+            </div>
+
+            <div
+              class="u-w100% u-bg-white u-h12px u-absolute u-z-2 u-bottom-0"
+            ></div>
+
+            <div
+              class="u-absolute u-bottom-0 u-right-0 u-z-3 u-bg-white u-pt16px u-pl16px u-rounded-[30px_0_0_0]"
+            >
+              <q-btn
+                @click="$router.push({ name: 'free_elective_course' })"
+                class="u-bg-fcp-black u-rounded-[20px_0_20px_0]"
+                padding="10px 18px"
+                flat
+              >
+                <span
+                  class="u-c-white u-text-18px u-font-bold u-tracking-0.1em"
+                >
+                  了解更多
+                </span>
+              </q-btn>
+            </div>
           </div>
         </div>
       </div>
