@@ -136,14 +136,14 @@
       <div
         v-for="item in contentOfWhyChooseFcp"
         :key="item.month"
-        class="u-w20% u-p24px u-aspect-ratio-1 u-bg-fcp-black u-rounded-25px u-flex u-flex-col u-items-center u-justify-start"
+        class="u-w20% u-p24px u-aspect-ratio-1 u-bg-fcp-black u-rounded-25px u-flex u-flex-col u-items-center u-justify-start u-group hover:u-bg-fcp-blue u-transition-all u-duration-300ms u-ease-in-out"
       >
         <p class="u-c-fcp-green">
           <span class="u-text-48px">{{ item.month }}</span>
           <span class="u-text-30px">個月</span>
         </p>
         <span
-          class="u-c-white u-text-48px u-text-center"
+          class="u-c-white u-text-48px u-text-center group-hover:u-font-heavy u-transition-all u-duration-300ms u-ease-in-out"
           v-html="item.description"
         >
         </span>

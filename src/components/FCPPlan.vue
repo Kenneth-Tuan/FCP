@@ -90,7 +90,7 @@ const planingContent = [
       <p class="u-c-fcp-blue u-text-60px u-font-bold u-pt40px">提供多元學制</p>
     </div>
 
-    <div class="u-flex u-flex-row u-w100% u-h600px">
+    <div class="u-flex u-flex-row u-w100% u-h600px u-mb24px">
       <div
         class="u-bg-fcp-blue u-flex-grow u-flex u-flex-col u-justify-between u-px5% u-pt10% u-pb5% u-rounded-[200px_0_0_0] u-h100%"
       >
@@ -113,6 +113,24 @@ const planingContent = [
         <img :src="Programs_Offered_image" alt="" />
       </div>
     </div>
+
+    <div class="u-flex u-justify-center">
+      <q-btn
+        @click="$router.push({ name: 'full_course' })"
+        padding="12px 16px"
+        outline
+        rounded
+      >
+        <div class="u-flex u-flex-row u-flex-gap-x-8px u-items-center">
+          <span class="u-text-24px u-c-fcp-blue">點我了解更多</span>
+          <p
+            class="u-bg-fcp-blue u-c-white u-rounded-100% u-w28px u-h28px u-text-24px"
+          >
+            +
+          </p>
+        </div>
+      </q-btn>
+    </div>
   </div>
 
   <div class="u-mb60px">
@@ -125,7 +143,7 @@ const planingContent = [
       <p class="u-c-fcp-blue u-text-60px u-font-bold u-pt40px">專業師資團隊</p>
     </div>
 
-    <div class="u-flex u-flex-row u-w100% u-h600px">
+    <div class="u-flex u-flex-row u-w100% u-h600px u-mb24px">
       <div
         class="u-bg-fcp-green u-flex-grow u-flex u-flex-col u-justify-between u-px5% u-pt10% u-pb5% u-rounded-[200px_0_0_0] u-h100%"
       >
@@ -148,7 +166,27 @@ const planingContent = [
         <img :src="Teachers_image" alt="" />
       </div>
     </div>
+
+    <div class="u-flex u-justify-center">
+      <q-btn padding="12px 16px" outline rounded>
+        <div class="u-flex u-flex-row u-flex-gap-x-8px u-items-center">
+          <span class="u-text-24px u-c-fcp-blue">點我了解更多</span>
+          <p
+            class="u-bg-fcp-blue u-c-white u-rounded-100% u-w28px u-h28px u-text-24px"
+          >
+            +
+          </p>
+        </div>
+      </q-btn>
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.q-btn {
+  border: 2px solid #6c8994;
+  &--outline::before {
+    border: none;
+  }
+}
+</style>

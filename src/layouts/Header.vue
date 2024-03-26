@@ -12,20 +12,28 @@
     <div
       class="u-flex u-flex-row u-items-center u-justify-center u-flex-gap-x-48px u-w-100%"
     >
-      <p class="u-c-white u-font-unbounded menuItem">關於我們</p>
+      <p class="u-c-white u-font-unbounded menuItem u-group">
+        <span class="u-inline group-hover:u-hidden"> 關於我們 </span>
+        <span class="u-hidden group-hover:u-inline"> About Us </span>
+      </p>
       <p
-        class="u-c-white u-font-unbounded menuItem"
+        class="u-c-white u-font-unbounded menuItem u-group"
         @click="$router.push({ name: 'Programs' })"
       >
-        FCP 訓練
+        <span class="u-inline group-hover:u-hidden"> FCP 訓練 </span>
+        <span class="u-hidden group-hover:u-inline"> Programs </span>
       </p>
       <p
-        class="u-c-white u-font-unbounded menuItem"
+        class="u-c-white u-font-unbounded menuItem u-group"
         @click="$router.push({ name: 'Events' })"
       >
-        最新消息
+        <span class="u-inline group-hover:u-hidden"> 最新消息 </span>
+        <span class="u-hidden group-hover:u-inline"> Events </span>
       </p>
-      <p class="u-c-white u-font-unbounded menuItem">穆宣國度視窗</p>
+      <p class="u-c-white u-font-unbounded menuItem u-group">
+        <span class="u-inline group-hover:u-hidden"> 穆宣國度視窗 </span>
+        <span class="u-hidden group-hover:u-inline"> Resource </span>
+      </p>
     </div>
 
     <div class="u-flex u-flex-row u-justify-center">

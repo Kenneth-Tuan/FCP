@@ -32,10 +32,9 @@ const routes = [
   },
   {
     path: "/programs",
-    name: "Programs",
     children: [
       {
-        path: "/",
+        path: "/programs",
         name: "Programs",
         component: Programs,
       },
