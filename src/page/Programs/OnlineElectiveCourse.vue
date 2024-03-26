@@ -17,6 +17,7 @@
       <q-btn
         padding="20px"
         class="u-absolute u-bottom-10% u-left-50% u-translate--50% u-bg-fcp-green u-rounded-[24px_0_24px_0]"
+        @click="scrollToSpecificTag('#howToRegister')"
       >
         <span class="u-c-fcp-blue u-font-bold u-text-36px">申請報名</span>
       </q-btn>
@@ -123,6 +124,7 @@
 
       <!-- 申請辦法 -->
       <FCPSubtitle
+        id="howToRegister"
         subtitleMsg="申請辦法"
         description="How to Registar?"
         class="u-mb36px"
@@ -234,12 +236,11 @@ import FreeElectiveCourse from "@/assets/img/programs/programs-3.jpg";
 import FCPSubtitle from "@/components/FCPSubtitle.vue";
 import FAQ from "@/components/FAQ.vue";
 import router from "@/router";
-
-async function downloadApplicationForm() {
-  const pdf = await fetch("/FCP_Application_Form.pdf").then((res) =>
-    res.arrayBuffer()
-  );
-}
+import {
+  scrollToSpecificTag,
+  downloadApplicationForm,
+  downloadRecommendationLetter,
+} from "@/utils/misc";
 </script>
 
 <style lang="scss" scoped></style>

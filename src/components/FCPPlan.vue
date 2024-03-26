@@ -117,8 +117,9 @@ const planingContent = [
     <div class="u-flex u-justify-center">
       <q-btn
         @click="$router.push({ name: 'full_course' })"
+        class="btnSecondStyle"
         padding="12px 16px"
-        outline
+        flat
         rounded
       >
         <div class="u-flex u-flex-row u-flex-gap-x-8px u-items-center">
@@ -183,10 +184,7 @@ const planingContent = [
 </template>
 
 <style lang="scss" scoped>
-.q-btn {
+.btnSecondStyle {
   border: 2px solid #6c8994;
-  &--outline::before {
-    border: none;
-  }
 }
 </style>

@@ -17,6 +17,7 @@
       <q-btn
         padding="20px"
         class="u-absolute u-bottom-10% u-left-50% u-translate--50% u-bg-fcp-green u-rounded-[24px_0_24px_0]"
+        @click="scrollToSpecificTag('#howToRegister')"
       >
         <span class="u-c-fcp-blue u-font-bold u-text-36px">申請報名</span>
       </q-btn>
@@ -205,6 +206,7 @@
       </div>
 
       <FCPSubtitle
+        id="howToRegister"
         subtitleMsg="申請辦法"
         description="How to Register?"
         class="u-mb36px"
@@ -224,11 +226,19 @@
             <p>1.最近半身脫帽1寸照片1張</p>
             <p>
               2.報名申請表
-              <span class="u-c-fcp-blue u-cursor-pointer">(點我下載)</span>
+              <span
+                class="u-c-fcp-blue u-cursor-pointer"
+                @click="downloadApplicationForm()"
+                >(點我下載)</span
+              >
             </p>
             <p>
               3.二份推薦信
-              <span class="u-c-fcp-blue u-cursor-pointer">(點我下載)</span>
+              <span
+                class="u-c-fcp-blue u-cursor-pointer"
+                @click="downloadRecommendationLetter()"
+                >(點我下載)</span
+              >
             </p>
             <p class="u-pl8px">
               (*其中一封需為所屬教會牧者；緘封口請推薦人簽名密封)
@@ -308,6 +318,11 @@ import InPersonFullCoursePoster from "@/assets/img/programs/Programs-1.jpg";
 import FCPSubtitle from "@/components/FCPSubtitle.vue";
 import RegistrationInfoCard from "@/components/RegistrationInfoCard.vue";
 import FAQ from "@/components/FAQ.vue";
+import {
+  scrollToSpecificTag,
+  downloadApplicationForm,
+  downloadRecommendationLetter,
+} from "@/utils/misc.js";
 </script>
 
 <style lang="scss" scoped></style>
