@@ -185,7 +185,7 @@
 </template>
 
 <script setup>
-import OnlineElectiveCoursePoster from "@/assets/img/programs/programs-2.jpg";
+import OnlineElectiveCoursePoster from "@/assets/img/programs/Programs-2.jpg";
 import FCPSubtitle from "@/components/FCPSubtitle.vue";
 import FAQ from "@/components/FAQ.vue";
 import router from "@/router";

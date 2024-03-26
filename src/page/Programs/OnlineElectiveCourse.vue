@@ -232,7 +232,7 @@
 </template>
 
 <script setup>
-import FreeElectiveCourse from "@/assets/img/programs/programs-3.jpg";
+import FreeElectiveCourse from "@/assets/img/programs/Programs-3.jpg";
 import FCPSubtitle from "@/components/FCPSubtitle.vue";
 import FAQ from "@/components/FAQ.vue";
 import router from "@/router";
