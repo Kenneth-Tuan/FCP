@@ -7,59 +7,75 @@ import InPersonFullCourse from "@/page/Programs/InPersonFullCourse.vue";
 import OnlineElectiveCourse from "@/page/Programs/OnlineElectiveCourse.vue";
 import FreeElectiveCourse from "@/page/Programs/FreeElectiveCourse.vue";
 import ContactUs from "@/page/ContactUs/Index.vue";
+import { i18n, updateLang } from "@/locales/index";
+
+const {
+  global: {
+    availableLocales,
+    fallbackLocale,
+    locale: { value: currentLocale },
+  },
+} = i18n;
 
 const routes = [
   {
     path: "/",
     redirect: {
       name: "Main",
+      params: { lang: fallbackLocale.value },
     },
   },
   {
-    path: "/main",
-    name: "Main",
-    component: Main,
-  },
-  {
-    path: "/events",
-    name: "Events",
-    component: Events,
-  },
-  {
-    path: "/contact-us",
-    name: "ContactUs",
-    component: ContactUs,
-  },
-  {
-    path: "/programs",
+    path: "/:lang",
     children: [
       {
-        path: "/programs",
-        name: "Programs",
-        component: Programs,
+        path: "FCP",
+        redirect: {
+          name: "Main",
+          params: { lang: currentLocale },
+        },
       },
       {
-        path: "In-Person-Full-Course",
-        name: "full_course",
-        component: InPersonFullCourse,
+        path: "FCP/main",
+        name: "Main",
+        component: Main,
       },
       {
-        path: "Online-Elective-Course",
-        name: "online_elective_course",
-        component: OnlineElectiveCourse,
+        path: "FCP/events",
+        name: "Events",
+        component: Events,
       },
       {
-        path: "Free-Elective-Course",
-        name: "free_elective_course",
-        component: FreeElectiveCourse,
+        path: "FCP/contact-us",
+        name: "ContactUs",
+        component: ContactUs,
+      },
+      {
+        path: "FCP/programs",
+        children: [
+          {
+            path: "programs",
+            name: "Programs",
+            component: Programs,
+          },
+          {
+            path: "In-Person-Full-Course",
+            name: "full_course",
+            component: InPersonFullCourse,
+          },
+          {
+            path: "Online-Elective-Course",
+            name: "online_elective_course",
+            component: OnlineElectiveCourse,
+          },
+          {
+            path: "Free-Elective-Course",
+            name: "free_elective_course",
+            component: FreeElectiveCourse,
+          },
+        ],
       },
     ],
-  },
-  {
-    path: "/:pathMatch(.*)*",
-    redirect: {
-      name: "Main",
-    },
   },
 ];
 
@@ -78,6 +94,20 @@ const router = createRouter({
 });
 
 router.beforeEach(async (to, from, next) => {
+  const {
+    params: { lang },
+  } = to;
+  // adjust locale
+  if (!availableLocales.includes(lang)) {
+    console.error(
+      `invalid lang in url, redirect to fallback locale:${fallbackLocale.value}`
+    );
+    next(`${fallbackLocale.value}/FCP`);
+  } else {
+    updateLang(lang);
+  }
+  console.log("test2");
+
   next();
 });
 

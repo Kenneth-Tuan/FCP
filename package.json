@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode dev",
     "build": "vite build",
+    "build:d0": "yarn build",
     "preview": "vite preview"
   },
   "dependencies": {
