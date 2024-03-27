@@ -10,7 +10,7 @@ export default ({ mode }) => {
   const { VITE_FCP_BASE_URL } = process.env;
 
   return defineConfig({
-    base: VITE_FCP_BASE_URL,
+    base: "FCP",
     server: {
       port: 9001,
       cors: true,
