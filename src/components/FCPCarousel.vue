@@ -10,31 +10,31 @@
       navigation-icon="radio_button_unchecked"
       navigation
       padding
-      height="auto"
+      height="850px"
     >
       <q-carousel-slide
         name="style"
-        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center"
+        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
       >
         <img :src="banner1" alt="" srcset="" class="u-w-100%" />
       </q-carousel-slide>
       <q-carousel-slide
         name="tv"
-        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center"
+        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
       >
         <img :src="banner2" alt="" srcset="" class="u-w-100%" />
       </q-carousel-slide>
       <q-carousel-slide
         name="layers"
-        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center"
+        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
       >
         <img :src="banner3" alt="" srcset="" class="u-w-100%" />
       </q-carousel-slide>
       <q-carousel-slide
         name="map"
-        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center"
+        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
       >
-        <img :src="banner4" alt="" srcset="" class="u-w-1280px" />
+        <img :src="banner4" alt="" srcset="" class="u-w-100%" />
       </q-carousel-slide>
     </q-carousel>
 
