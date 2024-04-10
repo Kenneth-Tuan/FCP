@@ -1,5 +1,7 @@
 <template>
-  <div class="u-relative">
+  <div class="u-relative u-overflow-hidden">
+    <!-- <p class="moving-text u-w100%">test test test</p> -->
+
     <q-carousel
       v-model="slide"
       transition-prev="jump-right"
@@ -16,25 +18,25 @@
         name="style"
         class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
       >
-        <img :src="banner1" alt="" srcset="" class="u-w-100%" />
+        <img :src="banner1" alt="" srcset="" class="u-w100%" />
       </q-carousel-slide>
       <q-carousel-slide
         name="tv"
         class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
       >
-        <img :src="banner2" alt="" srcset="" class="u-w-100%" />
+        <img :src="banner2" alt="" srcset="" class="u-w100%" />
       </q-carousel-slide>
       <q-carousel-slide
         name="layers"
         class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
       >
-        <img :src="banner3" alt="" srcset="" class="u-w-100%" />
+        <img :src="banner3" alt="" srcset="" class="u-w100%" />
       </q-carousel-slide>
       <q-carousel-slide
         name="map"
         class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
       >
-        <img :src="banner4" alt="" srcset="" class="u-w-100%" />
+        <img :src="banner4" alt="" srcset="" class="u-w100%" />
       </q-carousel-slide>
     </q-carousel>
 
@@ -67,4 +69,25 @@ import banner2 from "@/assets/img/WEB-MAIN-夥伴同行.png";
 const slide = ref("style");
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.moving-text:hover {
+  animation-play-state: paused;
+}
+
+/* The animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* media query to enable animation for only those who want it */
+@media (prefers-reduced-motion: no-preference) {
+  .moving-text {
+    animation: marquee 5s linear infinite;
+  }
+}
+</style>
