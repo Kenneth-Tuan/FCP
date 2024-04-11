@@ -38,17 +38,23 @@
 
     <div class="u-flex u-flex-row u-justify-center">
       <div class="u-w-72px u-flex u-flex-row u-justify-center u-items-center">
-        <FCPIcon name="home" color="white" class="u-cursor-pointer" />
+        <FCPIcon
+          name="home"
+          color="white"
+          class="u-cursor-pointer"
+          @click="$router.push({ name: 'Main' })"
+        />
       </div>
+
       <div class="u-w-72px u-flex u-flex-row u-justify-center u-items-center">
         <FCPIcon name="donate" color="white" class="u-cursor-pointer" />
       </div>
-      <div class="u-w-72px u-flex u-flex-row u-justify-center u-items-center">
+      <!-- <div class="u-w-72px u-flex u-flex-row u-justify-center u-items-center">
         <FCPIcon name="search" color="white" class="u-cursor-pointer" />
       </div>
       <div class="u-w-72px u-flex u-flex-row u-justify-center u-items-center">
         <FCPIcon name="user" color="white" class="u-cursor-pointer" />
-      </div>
+      </div> -->
       <FCPIcon name="FCP-hamburger-icon" class="u-cursor-pointer" />
     </div>
   </div>

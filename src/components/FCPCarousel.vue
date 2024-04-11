@@ -4,17 +4,21 @@
 
     <q-carousel
       v-model="slide"
-      transition-prev="jump-right"
-      transition-next="jump-left"
+      transition-prev="fade"
+      transition-next="fade"
+      transition-duration="200"
+      :autoplay="true"
       swipeable
       animated
       control-color="black"
       navigation-icon="radio_button_unchecked"
+      arrows
       navigation
-      padding
-      height="850px"
+      infinite
+      height="max-content"
+      class="u-aspect-ratio-16/9"
     >
-      <q-carousel-slide
+      <!-- <q-carousel-slide
         name="style"
         class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
       >
@@ -37,7 +41,27 @@
         class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
       >
         <img :src="banner4" alt="" srcset="" class="u-w100%" />
-      </q-carousel-slide>
+      </q-carousel-slide> -->
+      <q-carousel-slide
+        :name="1"
+        :img-src="banner1"
+        class="u-aspect-ratio-16/9"
+      />
+      <q-carousel-slide
+        :name="2"
+        :img-src="banner2"
+        class="u-aspect-ratio-16/9"
+      />
+      <q-carousel-slide
+        :name="3"
+        :img-src="banner3"
+        class="u-aspect-ratio-16/9"
+      />
+      <q-carousel-slide
+        :name="4"
+        :img-src="banner4"
+        class="u-aspect-ratio-16/9"
+      />
     </q-carousel>
 
     <q-btn
@@ -66,7 +90,7 @@ import banner4 from "@/assets/img/WEB-MAIN-完成使命.png";
 import banner3 from "@/assets/img/WEB-MAIN-看見異象.png";
 import banner2 from "@/assets/img/WEB-MAIN-夥伴同行.png";
 
-const slide = ref("style");
+const slide = ref(1);
 </script>
 
 <style lang="scss" scoped>

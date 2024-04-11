@@ -128,9 +128,10 @@
         <img :src="IG" alt="" srcset="" class="u-h-48px u-cursor-pointer" />
         <img :src="FB" alt="" srcset="" class="u-h-48px u-cursor-pointer" />
       </div>
+
       <div class="u-col-span-1 u-flex u-flex-col u-items-end u-c-gray">
-        <p class="u-w-307px u-font-unbounded">Email: eqiup.fcp@gmail.com</p>
-        <p class="u-w-307px u-flex u-flex-col u-items-end">
+        <p class="u-w307px u-font-unbounded">Email: eqiup.fcp@gmail.com</p>
+        <p class="u-w307px u-flex u-flex-col u-items-end">
           <span class="u-font-unbounded"> Tel.02-23518797 / 0952-067030 </span>
           <span class="u-font-light"> (*請洽Karen傳道) </span>
         </p>
