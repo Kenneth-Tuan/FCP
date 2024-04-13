@@ -13,7 +13,7 @@
   padding: 0 24px;
   background-color: #aec9c2;
   color: white;
-  border-radius: 45px 0 45px 0;
+  border-radius: 40px 0 40px 0;
   // font-size: 24px;
   // font-weight: 600;
 }

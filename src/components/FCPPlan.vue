@@ -1,191 +1,54 @@
 <script setup>
-import FCPButton from "./FCPButton.vue";
-
 import Programs_Offered_image from "@/assets/img/Programs-Offered-image.jpg";
 import Teachers_image from "@/assets/img/Teachers-image.jpg";
-
-const planingContent = [
-  {
-    cn: "工人靈命塑造",
-    en: "Spiritial Life and Character Formation",
-    icon: "FCP-icon-Spiritual Life and Character Formation",
-  },
-  {
-    cn: "跨文化認識",
-    en: "Understanding Cross Cultural Mission",
-    icon: "FCP-icon-Understanding Cross Cultural Mission",
-  },
-  {
-    cn: "語言學習與操練",
-    en: "Language Learning & Practice",
-    icon: "FCP-icon-Language Learning",
-  },
-  {
-    cn: "穆宣事工發展",
-    en: "Developing Ministries in the Islamic Context",
-    icon: "FCP-icon-Developing Ministries",
-  },
-  {
-    cn: "宣教團隊建造",
-    en: "Missional team Development and Leadership",
-    icon: "FCP-icon-Missional Team Development",
-  },
-  {
-    cn: "一對一教練",
-    en: "Diciple Making",
-    icon: "FCP-icon-Disciple Making",
-  },
-  {
-    cn: "海外實習",
-    en: "Overseas Internship",
-    icon: "FCP-icon-Overseas internship",
-  },
-];
+import MainDescription2 from "@/components/MainDescription2.vue";
+import ComprehensivePlanningDirection from "@/components/ComprehensivePlanningDirection.vue";
 </script>
 
 <template>
   <div class="u-mb60px">
-    <div class="u-mb16px u-relative u-pl60px">
-      <FCPIcon
-        name="FCP-mark(o)"
-        class="u-w-84px u-h-84px u-absolute u-left--12px u-top--24px"
-      />
-
-      <p class="u-c-fcp-blue u-text-60px u-font-bold u-pt40px">全面計劃方向</p>
-    </div>
-
-    <div
-      class="u-grid u-grid-cols-2 u-grid-rows-4 u-grid-gap-x-32px u-grid-gap-y-24px u-pl60px"
-    >
-      <div
-        v-for="content in planingContent"
-        class="u-col-span-1 u-flex u-flex-row u-items-center u-justify-start u-h100px u-flex-gap-16px"
-      >
-        <FCPIcon class="u-h100%" :name="content.icon" />
-
-        <div class="u-flex u-flex-col u-items-start u-c-fcp-blue u-text-24px">
-          <span class="u-font-bold">{{ content.cn }}</span>
-          <span>{{ content.en }}</span>
-        </div>
-      </div>
-
-      <FCPButton class="" @click="$router.push({ name: 'Programs' })">
-        <div>
-          <span class="u-font-bold u-text-30px u-tracking-0.05em">
-            看更多内容
-          </span>
-          <FCPIcon name="arrow_circle_right" class="u-ml16px" />
-        </div>
-      </FCPButton>
-    </div>
+    <ComprehensivePlanningDirection />
   </div>
 
-  <div class="u-mb60px">
-    <div class="u-mb16px u-relative u-pl60px">
-      <FCPIcon
-        name="FCP-mark(o)"
-        class="u-w-84px u-h-84px u-absolute u-left--12px u-top--24px"
-      />
-
-      <p class="u-c-fcp-blue u-text-60px u-font-bold u-pt40px">提供多元學制</p>
-    </div>
-
-    <div class="u-flex u-flex-row u-w100% u-h600px u-mb24px">
-      <div
-        class="u-bg-fcp-blue u-flex-grow u-flex u-flex-col u-justify-between u-px5% u-pt10% u-pb5% u-rounded-[200px_0_0_0] u-w40% u-h100%"
-      >
-        <span
-          class="u-c-fcp-green u-text-60px u-lh-70px u-tracking-0.05em u-font-unbounded"
-        >
-          Programs<br />Offered
+  <MainDescription2
+    title="提供多元學制"
+    subtitle="Programs Offered"
+    :image="Programs_Offered_image"
+    routeTargetName="full_course"
+    bgColor="blue"
+    fontColor="green"
+  >
+    <template #description>
+      <p class="u-tracking-0.025em">
+        <span class="u-text-36px u-c-fcp-gray u-font-bold">
+          歡迎您依照自己的屬性，來參與
         </span>
-
-        <p class="u-tracking-0.025em">
-          <span class="u-text-36px u-c-fcp-gray u-font-bold"
-            >歡迎您依照自己的屬性，來參與
-          </span>
-          <span class="u-text-36px u-c-fcp-green u-font-bold">
-            ——FCP穆宣工人團隊
-          </span>
-        </p>
-      </div>
-
-      <div class="u-w60% u-h100% u-overflow-hidden">
-        <img :src="Programs_Offered_image" alt="" />
-      </div>
-    </div>
-
-    <div class="u-flex u-justify-center">
-      <q-btn
-        @click="$router.push({ name: 'full_course' })"
-        class="btnSecondStyle"
-        padding="12px 16px"
-        flat
-        rounded
-      >
-        <div class="u-flex u-flex-row u-flex-gap-x-8px u-items-center">
-          <span class="u-text-24px u-c-fcp-blue">點我了解更多</span>
-          <p
-            class="u-bg-fcp-blue u-c-white u-rounded-100% u-w28px u-h28px u-text-24px"
-          >
-            +
-          </p>
-        </div>
-      </q-btn>
-    </div>
-  </div>
-
-  <div class="u-mb60px">
-    <div class="u-mb16px u-relative u-pl60px">
-      <FCPIcon
-        name="FCP-mark(o)"
-        class="u-w-84px u-h-84px u-absolute u-left--12px u-top--24px"
-      />
-
-      <p class="u-c-fcp-blue u-text-60px u-font-bold u-pt40px">專業師資團隊</p>
-    </div>
-
-    <div class="u-flex u-flex-row u-w100% u-h600px u-mb24px">
-      <div
-        class="u-bg-fcp-green u-flex-grow u-flex u-flex-col u-justify-between u-px5% u-pt10% u-pb5% u-rounded-[200px_0_0_0] u-w40% u-h100%"
-      >
-        <span
-          class="u-c-fcp-blue u-text-60px u-lh-70px u-tracking-0.05em u-font-unbounded"
-        >
-          Teachers
+        <span class="u-text-36px u-c-fcp-green u-font-bold">
+          ——FCP穆宣工人團隊
         </span>
+      </p>
+    </template>
+  </MainDescription2>
 
-        <p class="u-tracking-0.025em">
-          <span class="u-text-36px u-c-fcp-gray u-font-bold"
-            >集結海内外的資深穆宣工人老師——
-          </span>
-          <span class="u-text-36px u-c-fcp-blue u-font-bold">
-            以專業引您進禾場
-          </span>
-        </p>
-      </div>
-      <div class="u-w60% u-h100% u-overflow-hidden">
-        <img :src="Teachers_image" alt="" />
-      </div>
-    </div>
-
-    <div class="u-flex u-justify-center">
-      <q-btn class="btnSecondStyle" padding="12px 16px" flat rounded>
-        <div class="u-flex u-flex-row u-flex-gap-x-8px u-items-center">
-          <span class="u-text-24px u-c-fcp-blue">點我了解更多</span>
-          <p
-            class="u-bg-fcp-blue u-c-white u-rounded-100% u-w28px u-h28px u-text-24px"
-          >
-            +
-          </p>
-        </div>
-      </q-btn>
-    </div>
-  </div>
+  <MainDescription2
+    title="專業師資團隊"
+    subtitle="Teachers"
+    :image="Teachers_image"
+    routeTargetName="teachers"
+    bgColor="green"
+    fontColor="blue"
+  >
+    <template #description>
+      <p class="u-tracking-0.025em">
+        <span class="u-text-36px u-c-fcp-gray u-font-bold"
+          >集結海内外的資深穆宣工人老師——
+        </span>
+        <span class="u-text-36px u-c-fcp-blue u-font-bold">
+          以專業引您進禾場
+        </span>
+      </p>
+    </template>
+  </MainDescription2>
 </template>
 
-<style lang="scss" scoped>
-.btnSecondStyle {
-  border: 2px solid #6c8994;
-}
-</style>
+<style lang="scss" scoped></style>

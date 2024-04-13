@@ -1,6 +1,6 @@
 <template>
   <div
-    class="u-bg-fcp-green-1 u-ml-48px u-mt-48px u-py-48px u-pl-36px u-rounded-[72px_0_0_72px] u-relative u-flex u-flex-col u-flex-gap-y-36px"
+    class="u-bg-fcp-green-1 u-ml-48px u-mt-48px u-py48px u-px36px u-rounded-72px u-relative u-flex u-flex-col u-flex-gap-y-36px"
   >
     <FCPIcon
       name="FCP-mark(green)"
