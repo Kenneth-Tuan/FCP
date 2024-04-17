@@ -106,7 +106,6 @@ router.beforeEach(async (to, from, next) => {
   } else {
     updateLang(lang);
   }
-  console.log("test2");
 
   next();
 });

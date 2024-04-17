@@ -32,8 +32,9 @@ export default defineConfig({
       unbounded: "unbounded",
     },
     breakpoints: {
-      sm: "320px",
-      md: "640px",
+      sm: "360px",
+      md: "768px",
+      lg: "1280px",
     },
     verticalBreakpoints: {},
     boxShadow: {

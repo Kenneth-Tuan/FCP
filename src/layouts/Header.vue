@@ -1,77 +1,170 @@
-<template>
-  <div
-    class="u-flex u-flex-row u-justify-between u-h-72px u-pl-12px u-bg-#3E3E40"
-  >
-    <img
-      :src="FCP_LOGO"
-      alt=""
-      srcset=""
-      class="u-cursor-pointer"
-      @click="$router.push({ name: 'Main' })"
-    />
-    <div
-      class="u-flex u-flex-row u-items-center u-justify-center u-flex-gap-x-48px u-w-100%"
-    >
-      <p class="u-c-white u-font-unbounded menuItem u-group">
-        <span class="u-inline group-hover:u-hidden"> 關於我們 </span>
-        <span class="u-hidden group-hover:u-inline"> About Us </span>
-      </p>
-      <p
-        class="u-c-white u-font-unbounded menuItem u-group"
-        @click="$router.push({ name: 'Programs' })"
-      >
-        <span class="u-inline group-hover:u-hidden"> FCP 訓練 </span>
-        <span class="u-hidden group-hover:u-inline"> Programs </span>
-      </p>
-      <p
-        class="u-c-white u-font-unbounded menuItem u-group"
-        @click="$router.push({ name: 'Events' })"
-      >
-        <span class="u-inline group-hover:u-hidden"> 最新消息 </span>
-        <span class="u-hidden group-hover:u-inline"> Events </span>
-      </p>
-      <p class="u-c-white u-font-unbounded menuItem u-group">
-        <span class="u-inline group-hover:u-hidden"> 穆宣國度視窗 </span>
-        <span class="u-hidden group-hover:u-inline"> Resource </span>
-      </p>
-    </div>
-
-    <div class="u-flex u-flex-row u-justify-center">
-      <div class="u-w-72px u-flex u-flex-row u-justify-center u-items-center">
-        <FCPIcon
-          name="home"
-          color="white"
-          class="u-cursor-pointer"
-          @click="$router.push({ name: 'Main' })"
-        />
-      </div>
-
-      <div class="u-w-72px u-flex u-flex-row u-justify-center u-items-center">
-        <FCPIcon name="donate" color="white" class="u-cursor-pointer" />
-      </div>
-      <!-- <div class="u-w-72px u-flex u-flex-row u-justify-center u-items-center">
-        <FCPIcon name="search" color="white" class="u-cursor-pointer" />
-      </div>
-      <div class="u-w-72px u-flex u-flex-row u-justify-center u-items-center">
-        <FCPIcon name="user" color="white" class="u-cursor-pointer" />
-      </div> -->
-      <FCPIcon name="FCP-hamburger-icon" class="u-cursor-pointer" />
-    </div>
-  </div>
-</template>
-
-<script setup lang="js">
-import FCP_LOGO from "@/assets/icons/FCP-logo-ch.png";
+<script setup>
+import FCPBtnDropDown from "@/components/FCPBtnDropDown.vue";
 </script>
 
-<style lang="scss" scoped>
-.menuItem {
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  border-bottom: 1px solid rgba(255, 255, 255, 0);
+<template>
+  <q-toolbar
+    :class="{
+      'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+      'md:u-w100% sm:u-w60px u-h36px': 'layout',
+      'shadow-2 sm:u-rounded-[0_8px_8px_0] md:u-rounded-none md:u-px8px sm:u-p0px':
+        'style',
+      'md:u-relative sm:u-fixed u-z-99': 'position',
+      'u-c-white u-bg-#3E3E40': 'color',
+    }"
+  >
+    <q-btn flat icon="menu" :class="{ 'md:u-hidden sm:u-block': 'display' }" />
+    <q-btn
+      flat
+      :class="{
+        'u-text-24px u-fw900': 'text',
+        'sm:u-hidden md:u-block': 'display',
+        'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+      }"
+      @click="$router.push({ name: 'Main' })"
+      padding="0 8px"
+      label="FCP"
+    />
 
-  &:hover {
-    border-bottom: 1px solid rgba(255, 255, 255, 1);
-  }
-}
-</style>
+    <q-separator
+      dark
+      vertical
+      inset
+      :class="{ 'sm:u-hidden md:u-block': 'display', 'u-mx8px': 'spacing' }"
+    />
+
+    <FCPBtnDropDown
+      label="關於我們"
+      flat
+      :class="{
+        'sm:u-hidden md:u-block': 'display',
+        'u-text-nowrap': 'text',
+        'md:u-px4px lg:u-px16px': 'spacing',
+        'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+      }"
+    >
+      <q-item clickable v-close-popup>
+        <q-item-section>
+          <q-item-label>一對一</q-item-label>
+        </q-item-section>
+      </q-item>
+    </FCPBtnDropDown>
+
+    <FCPBtnDropDown
+      flat
+      label="FCP 訓練"
+      @click="$router.push({ name: 'Programs' })"
+      :class="{
+        'sm:u-hidden md:u-block': 'display',
+        'u-text-nowrap': 'text',
+        'md:u-px4px lg:u-px16px': 'spacing',
+        'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+      }"
+    >
+      <q-item
+        @click="$router.push({ name: 'full_course' })"
+        clickable
+        v-close-popup
+      >
+        <q-item-section>
+          <q-item-label>實體全修班</q-item-label>
+        </q-item-section>
+      </q-item>
+      <q-item
+        @click="$router.push({ name: 'online_elective_course' })"
+        clickable
+        v-close-popup
+      >
+        <q-item-section>
+          <q-item-label>線上選修班</q-item-label>
+        </q-item-section>
+      </q-item>
+      <q-item
+        @click="$router.push({ name: 'free_elective_course' })"
+        clickable
+        v-close-popup
+      >
+        <q-item-section>
+          <q-item-label>自由選課班</q-item-label>
+        </q-item-section>
+      </q-item>
+    </FCPBtnDropDown>
+
+    <q-btn
+      flat
+      label="最新消息"
+      @click="$router.push({ name: 'Events' })"
+      :class="{
+        'sm:u-hidden md:u-block': 'display',
+        'u-text-nowrap': 'text',
+        'md:u-px4px lg:u-px16px': 'spacing',
+        'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+      }"
+    />
+
+    <q-btn
+      flat
+      label="穆宣國度視窗"
+      :class="{
+        'sm:u-hidden md:u-block': 'display',
+        'u-text-nowrap': 'text',
+        'md:u-px4px lg:u-px16px': 'spacing',
+        'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+      }"
+    />
+
+    <q-btn
+      flat
+      label="聯絡我們"
+      @click="$router.push({ name: 'ContactUs' })"
+      :class="{
+        'sm:u-hidden md:u-block': 'display',
+        'u-text-nowrap': 'text',
+        'md:u-px4px lg:u-px16px': 'spacing',
+        'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+      }"
+    />
+
+    <q-space :class="{ 'sm:u-hidden md:u-block': 'display' }" />
+    <!-- <q-separator dark vertical /> -->
+    <q-btn
+      flat
+      icon="house"
+      @click="$router.push({ name: 'Main' })"
+      :class="{
+        'sm:u-hidden md:u-block': 'display',
+        'md:u-px4px lg:u-px12px': 'spacing',
+        'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+      }"
+    />
+    <q-btn
+      flat
+      icon="search"
+      :class="{
+        'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+        'sm:u-hidden md:u-block': 'display',
+        'md:u-px4px lg:u-px12px': 'spacing',
+      }"
+    />
+    <q-btn
+      flat
+      icon="volunteer_activism"
+      :class="{
+        'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+        'sm:u-hidden md:u-block': 'display',
+        'md:u-px4px lg:u-px12px': 'spacing',
+      }"
+    />
+    <q-btn
+      flat
+      icon="person"
+      :class="{
+        'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+        'sm:u-hidden md:u-block': 'display',
+        'md:u-px4px lg:u-px12px': 'spacing',
+      }"
+    />
+  </q-toolbar>
+</template>
+
+<style lang="scss" scoped></style>
