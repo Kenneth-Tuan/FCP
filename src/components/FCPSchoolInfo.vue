@@ -1,12 +1,20 @@
 <template>
   <div
-    class="u-bg-fcp-green-1 u-ml-48px u-mt-48px u-py48px u-px36px u-rounded-72px u-relative u-flex u-flex-col u-flex-gap-y-36px"
+    class=""
+    :class="{
+      'u-bg-fcp-green-1': 'color',
+      'u-py48px u-px36px': 'spacing',
+      'u-rounded-72px': 'shape',
+      'u-flex u-flex-col u-flex-gap-y-36px': 'layout',
+      'u-relative': 'position',
+    }"
   >
     <FCPIcon
       name="FCP-mark(green)"
-      class="u-w-108px u-h-108px u-absolute u-left-80px u-top--54px"
+      class="u-w108px u-h108px u-absolute u-left-80px u-top-54px"
       fill="u-c-fcp-green-1"
     />
+
     <div class="">
       <p class="u-c-fcp-blue u-text-48px u-font-heavy u-pl-72px">
         前線穆宣工人訓練學校

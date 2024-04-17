@@ -45,6 +45,7 @@ export default defineConfig({
     // you could still have object style
     {
       btn: "py-2 px-4 font-semibold rounded-lg shadow-md",
+      ["u-square-1"]: "u-aspect-ratio-1 lg:u-w48px md:u-w36px sm:u-w24px",
     },
   ],
   variants: [
