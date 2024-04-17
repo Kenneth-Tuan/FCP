@@ -1,6 +1,6 @@
 <template>
   <div class="u-flex u-flex-col u-justify-start u-h100% u-mxauto">
-    <FCPCarousel />
+    <FCPCarousel class="u-mb24px" />
     <section
       name="main-content"
       class="u-flex u-flex-row u-justify-center u-items-start u-flex-nowrap u-h100%"

@@ -11,75 +11,55 @@
       swipeable
       animated
       control-color="black"
+      control-type="push"
       navigation-icon="radio_button_unchecked"
       arrows
-      navigation
+      :navigation="false"
       infinite
       height="max-content"
       class="u-aspect-ratio-16/9"
     >
-      <!-- <q-carousel-slide
-        name="style"
-        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
-      >
-        <img :src="banner1" alt="" srcset="" class="u-w100%" />
-      </q-carousel-slide>
       <q-carousel-slide
-        name="tv"
-        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
-      >
-        <img :src="banner2" alt="" srcset="" class="u-w100%" />
-      </q-carousel-slide>
-      <q-carousel-slide
-        name="layers"
-        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
-      >
-        <img :src="banner3" alt="" srcset="" class="u-w100%" />
-      </q-carousel-slide>
-      <q-carousel-slide
-        name="map"
-        class="u-p-0 u-flex u-flex-row u-justify-center u-items-center u-overflow-hidden"
-      >
-        <img :src="banner4" alt="" srcset="" class="u-w100%" />
-      </q-carousel-slide> -->
-      <q-carousel-slide
+        @click="$router.push({ name: 'Events' })"
         :name="1"
         :img-src="banner1"
-        class="u-aspect-ratio-16/9"
+        class="u-aspect-ratio-16/9 u-cursor-pointer"
       />
       <q-carousel-slide
+        @click="$router.push({ name: 'Events' })"
         :name="2"
         :img-src="banner2"
-        class="u-aspect-ratio-16/9"
+        class="u-aspect-ratio-16/9 u-cursor-pointer"
       />
       <q-carousel-slide
+        @click="$router.push({ name: 'Events' })"
         :name="3"
         :img-src="banner3"
-        class="u-aspect-ratio-16/9"
+        class="u-aspect-ratio-16/9 u-cursor-pointer"
       />
       <q-carousel-slide
+        @click="$router.push({ name: 'Events' })"
         :name="4"
         :img-src="banner4"
-        class="u-aspect-ratio-16/9"
+        class="u-aspect-ratio-16/9 u-cursor-pointer"
       />
     </q-carousel>
 
-    <q-btn
+    <!-- <q-btn
       @click="$router.push({ name: 'Events' })"
-      class="u-rounded-[0_24px_0_24px] u-bg-fcp-blue u-absolute u-bottom-13% u-right-12%"
-      padding="8px 8px"
+      class="u-rounded-[0_24px] u-bg-fcp-blue u-absolute u-bottom-5% u-left-75% u-translate-x--50%"
+      padding="8px"
       flat
-      rounded
     >
-      <div class="u-flex u-flex-row u-flex-gap-x-8px u-items-center">
-        <span class="u-c-white u-text-48px u-font-regular">了解更多</span>
-        <p
-          class="u-bg-fcp-yellow u-c-white u-rounded-100% u-w48px u-h48px u-text-48px u-lh-36px"
+      <div class="u-flex u-flex-gap-x-8px u-items-center">
+        <span class="u-c-white u-text-24px ">了解更多</span>
+        <div
+          class="u-bg-fcp-yellow u-c-white u-rounded-100% u-w24px u-h24px u-text-24px u-lh-18px"
         >
           +
-        </p>
+        </div>
       </div>
-    </q-btn>
+    </q-btn> -->
   </div>
 </template>
 
