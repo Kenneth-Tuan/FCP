@@ -19,10 +19,44 @@
           </span>
         </Vue3Marquee>
       </div> -->
-      <section class="u-w100%">
-        <MainDescription class="u-mb48px" />
+      <section class="u-w100% u-flex u-flex-col u-flex-gap-y-48px">
+        <MainDescription />
         <FCPSchoolInfo />
-        <FCPPlan />
+        <ComprehensivePlanningDirection />
+        <MainDescription2
+          title="提供多元學制"
+          subtitle="Programs Offered"
+          :image="Programs_Offered_image"
+          routeTargetName="full_course"
+        >
+          <template #description>
+            <p class="u-tracking-0.025em">
+              <span class="u-text-36px u-c-fcp-gray u-font-bold">
+                歡迎您依照自己的屬性，來參與
+              </span>
+              <span class="u-text-36px u-c-fcp-green u-font-bold">
+                —— FCP穆宣工人團隊
+              </span>
+            </p>
+          </template>
+        </MainDescription2>
+        <MainDescription2
+          title="專業師資團隊"
+          subtitle="Teachers"
+          :image="Teachers_image"
+          routeTargetName="teachers"
+        >
+          <template #description>
+            <p class="u-tracking-0.025em">
+              <span class="u-text-36px u-c-fcp-gray u-font-bold"
+                >集結海内外的資深穆宣工人老師
+              </span>
+              <span class="u-text-36px u-c-fcp-green u-font-bold">
+                —— 以專業引您進禾場
+              </span>
+            </p>
+          </template>
+        </MainDescription2>
       </section>
     </section>
 
@@ -55,14 +89,17 @@
 <script setup lang="js">
 
 import { Vue3Marquee } from 'vue3-marquee'
+import { onMounted } from 'vue'
 import CircleType from 'circletype'
 
 import FCPCarousel from '@/components/FCPCarousel.vue'
 import CTA from '@/assets/img/CTA-image.png'
 import MainDescription from '@/components/MainDescription.vue'
 import FCPSchoolInfo from '@/components/FCPSchoolInfo.vue'
-import FCPPlan from '@/components/FCPPlan.vue'
-import { onMounted } from 'vue'
+import Programs_Offered_image from "@/assets/img/Programs-Offered-image.jpg";
+import Teachers_image from "@/assets/img/Teachers-image.jpg";
+import MainDescription2 from "@/components/MainDescription2.vue";
+import ComprehensivePlanningDirection from "@/components/ComprehensivePlanningDirection.vue";
 
 onMounted(() => {
   const text = new CircleType(document.querySelector('#test'))

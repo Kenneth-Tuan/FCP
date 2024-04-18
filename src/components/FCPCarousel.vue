@@ -52,7 +52,7 @@
       flat
     >
       <div class="u-flex u-flex-gap-x-8px u-items-center">
-        <span class="u-c-white u-text-24px ">了解更多</span>
+        <span class="u-c-white u-text-24px">了解更多</span>
         <div
           class="u-bg-fcp-yellow u-c-white u-rounded-100% u-w24px u-h24px u-text-24px u-lh-18px"
         >
