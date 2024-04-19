@@ -1,21 +1,25 @@
 <template>
-  <div>
-    <div class="u-mb16px u-relative u-pl60px">
+  <div class="u-w100%">
+    <div
+      class="u-mb16px u-relative"
+      :class="{ 'lg:u-pl60px sm:u-pl48px': 'pos' }"
+    >
       <FCPIcon
         name="FCP-mark(o)"
         :class="[
           {
-            'u-w-84px u-h-84px': 'dimension',
-            'u-absolute u-left--12px u-top--24px': 'position',
+            'lg:u-w84px sm:u-w60px': 'dimension',
+            'u-left--16px': 'pos',
           },
+          'u-aspect-ratio-1 u-absolute ',
         ]"
       />
 
       <p
         :class="[
           {
-            'u-pt40px': 'spacing',
-            'u-text-60px u-font-bold ': 'text',
+            'lg:u-pt40px sm:u-pt24px': 'spacing',
+            'lg:u-text-60px sm:u-text-36px u-font-bold ': 'text',
           },
           `u-c-fcp-blue`,
         ]"
@@ -25,11 +29,14 @@
     </div>
 
     <div
-      :class="{
-        '': 'dimension',
-        'u-flex lg:u-flex-row sm:u-flex-col-reverse': 'layout',
-        'u-rounded-[20%_0_0_0] u-overflow-hidden': 'shape',
-      }"
+      :class="[
+        {
+          'u-w100%': 'dimension',
+          'u-flex lg:u-flex-row sm:u-flex-col-reverse': 'layout',
+          'lg:u-rounded-[60px_0_0_0] sm:u-rounded-[24px_0_0_0] ': 'shape',
+        },
+        'u-overflow-hidden',
+      ]"
     >
       <div
         :class="[
@@ -40,27 +47,38 @@
           `u-bg-fcp-blue`,
         ]"
       >
-        <span
-          class="u-text-60px u-lh-70px u-tracking-0.05em u-font-unbounded"
-          :class="`u-c-fcp-green`"
-        >
-          {{ subtitle }}
-        </span>
+        <div class="u-flex-1 u-flex u-justify-start u-items-center">
+          <span
+            :class="[
+              {
+                'lg:u-text-60px lg:u-lh-70px sm:u-text-36px  u-tracking-0.05em u-font-unbounded':
+                  'tx',
+              },
+              `u-c-fcp-green`,
+            ]"
+          >
+            {{ subtitle }}
+          </span>
+        </div>
 
-        <slot name="description"></slot>
+        <div class="u-w100% u-flex u-flex-col u-items-center">
+          <slot name="description"></slot>
 
-        <div class="u-mxauto">
           <q-btn
             @click="$router.push({ name: routeTargetName })"
-            class="btnSecondStyle u-bg-fcp-yellow"
-            padding="12px 16px"
+            class="btnSecondStyle u-bg-fcp-yellow u-mt8px"
             flat
             rounded
           >
-            <div class="u-flex u-flex-row u-flex-gap-x-8px u-items-center">
-              <span class="u-text-24px u-c-white">點我了解更多</span>
+            <div
+              class="u-flex u-flex-row u-flex-gap-x-8px u-items-center u-p2%"
+            >
+              <span
+                class="lg:u-text-24px sm:u-text-18px u-text-nowrap u-c-white"
+                >點我了解更多</span
+              >
               <p
-                class="u-bg-fcp-green u-c-white u-rounded-100% u-w28px u-h28px u-text-24px"
+                class="u-bg-fcp-green u-c-white u-rounded-100% u-w28px u-aspect-ratio-1 u-text-24px"
               >
                 +
               </p>

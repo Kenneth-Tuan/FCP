@@ -1,37 +1,61 @@
 <template>
-  <div>
-    <div class="u-mb16px u-relative u-pl60px">
+  <div class="u-w100%">
+    <div
+      class="u-mb16px u-relative"
+      :class="{ 'lg:u-pl60px sm:u-pl48px': 'pos' }"
+    >
       <FCPIcon
         name="FCP-mark(o)"
-        class="u-w-84px u-h-84px u-absolute u-left--12px u-top--24px"
+        :class="[
+          {
+            'lg:u-w84px sm:u-w60px': 'dimension',
+            'u-left--16px': 'pos',
+          },
+          'u-aspect-ratio-1 u-absolute ',
+        ]"
       />
 
-      <p class="u-c-fcp-blue u-text-60px u-font-bold u-pt40px">全面計劃方向</p>
+      <p
+        :class="[
+          {
+            'lg:u-pt40px sm:u-pt24px': 'spacing',
+            'lg:u-text-60px sm:u-text-36px u-font-bold ': 'text',
+          },
+          `u-c-fcp-blue`,
+        ]"
+      >
+        全面計劃方向
+      </p>
     </div>
 
     <div
-      class="u-grid u-grid-cols-2 u-grid-rows-4 u-grid-gap-x-32px u-grid-gap-y-24px u-pl60px"
+      class="u-grid lg:u-grid-cols-2 u-grid-rows-4 u-grid-gap-x-32px u-grid-gap-y-36px"
+      :class="{ 'lg:u-pl60px sm:u-pl48px': 'pos' }"
     >
       <div
         v-for="content in planingContent"
         class="u-col-span-1 u-flex u-flex-row u-items-center u-justify-start u-h100px u-flex-gap-16px"
       >
-        <FCPIcon class="u-h100%" :name="content.icon" />
+        <FCPIcon class="u-w20% u-max-w100px u-min-w60px" :name="content.icon" />
 
-        <div class="u-flex u-flex-col u-items-start u-c-fcp-blue u-text-24px">
+        <div
+          class="u-flex u-flex-col u-items-start u-c-fcp-blue u-text-24px u-lh-36px"
+        >
           <span class="u-font-bold">{{ content.cn }}</span>
           <span>{{ content.en }}</span>
         </div>
       </div>
 
-      <FCPButton @click="$router.push({ name: 'Programs' })">
-        <div>
-          <span class="u-font-bold u-text-30px u-tracking-0.05em">
-            看更多内容
-          </span>
-          <!-- <FCPIcon name="arrow_circle_right" class="u-ml16px" /> -->
-        </div>
-      </FCPButton>
+      <div class="u-flex u-items-center">
+        <FCPButton @click="$router.push({ name: 'Programs' })">
+          <div class="">
+            <span class="u-font-bold u-text-30px u-tracking-0.05em">
+              看更多内容
+            </span>
+            <!-- <FCPIcon name="arrow_circle_right" class="u-ml16px" /> -->
+          </div>
+        </FCPButton>
+      </div>
     </div>
   </div>
 </template>
