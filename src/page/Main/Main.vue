@@ -3,7 +3,7 @@
     <FCPCarousel class="u-mb24px" />
     <section
       name="main-content"
-      class="u-px5% u-flex u-justify-center u-items-start u-flex-nowrap u-h100%"
+      class="u-px5% u-flex u-justify-center u-items-start u-flex-nowrap u-h100% u-mb48px"
     >
       <!-- <div style="height: 100%; width: max-content">
         <Vue3Marquee
@@ -61,10 +61,6 @@
 </template>
 
 <script setup lang="js">
-
-import { Vue3Marquee } from 'vue3-marquee'
-import { onMounted } from 'vue'
-
 import FCPCarousel from '@/components/FCPCarousel.vue'
 import MainDescription from '@/components/MainDescription.vue'
 import FCPSchoolInfo from '@/components/FCPSchoolInfo.vue'
