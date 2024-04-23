@@ -6,19 +6,16 @@ import FCPBtnDropDown from "@/components/FCPBtnDropDown.vue";
   <q-toolbar
     :class="{
       'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
-      'md:u-w100% sm:u-w60px u-h36px': 'layout',
-      'shadow-2 sm:u-rounded-[0_8px_8px_0] md:u-rounded-none md:u-px8px sm:u-p0px':
-        'style',
-      'md:u-relative sm:u-fixed u-z-99': 'position',
+      'u-w100% u-h36px': 'layout',
+      'shadow-2 u-px8px': 'style',
+      'u-fixed u-z-99': 'position',
       'u-c-white u-bg-#3E3E40': 'color',
     }"
   >
-    <q-btn flat icon="menu" :class="{ 'md:u-hidden sm:u-block': 'display' }" />
     <q-btn
       flat
       :class="{
         'u-text-24px u-fw900': 'text',
-        'sm:u-hidden md:u-block': 'display',
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
       }"
       @click="$router.push({ name: 'Main' })"
@@ -26,12 +23,7 @@ import FCPBtnDropDown from "@/components/FCPBtnDropDown.vue";
       label="FCP"
     />
 
-    <q-separator
-      dark
-      vertical
-      inset
-      :class="{ 'sm:u-hidden md:u-block': 'display', 'u-mx8px': 'spacing' }"
-    />
+    <q-separator dark vertical inset :class="{ 'u-mx8px': 'spacing' }" />
 
     <FCPBtnDropDown
       label="關於我們"
@@ -125,14 +117,14 @@ import FCPBtnDropDown from "@/components/FCPBtnDropDown.vue";
       }"
     />
 
-    <q-space :class="{ 'sm:u-hidden md:u-block': 'display' }" />
+    <q-space />
     <!-- <q-separator dark vertical /> -->
     <q-btn
       flat
       icon="house"
       @click="$router.push({ name: 'Main' })"
       :class="{
-        'sm:u-hidden md:u-block': 'display',
+        'sm:u-hidden lg:u-block': 'display',
         'md:u-px4px lg:u-px12px': 'spacing',
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
       }"
@@ -142,7 +134,6 @@ import FCPBtnDropDown from "@/components/FCPBtnDropDown.vue";
       icon="search"
       :class="{
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
-        'sm:u-hidden md:u-block': 'display',
         'md:u-px4px lg:u-px12px': 'spacing',
       }"
     />
@@ -151,7 +142,6 @@ import FCPBtnDropDown from "@/components/FCPBtnDropDown.vue";
       icon="volunteer_activism"
       :class="{
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
-        'sm:u-hidden md:u-block': 'display',
         'md:u-px4px lg:u-px12px': 'spacing',
       }"
     />
@@ -160,10 +150,11 @@ import FCPBtnDropDown from "@/components/FCPBtnDropDown.vue";
       icon="person"
       :class="{
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
-        'sm:u-hidden md:u-block': 'display',
         'md:u-px4px lg:u-px12px': 'spacing',
       }"
     />
+
+    <q-btn flat icon="menu" :class="{ 'lg:u-hidden sm:u-block': 'display' }" />
   </q-toolbar>
 </template>
 

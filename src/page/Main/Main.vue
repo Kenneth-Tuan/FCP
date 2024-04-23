@@ -1,5 +1,5 @@
 <template>
-  <div class="u-flex u-flex-col u-justify-start u-h100% u-mxauto">
+  <div class="u-flex u-flex-col u-justify-start u-h100% u-mxauto u-pt50px">
     <FCPCarousel class="u-mb24px" />
     <section
       name="main-content"
