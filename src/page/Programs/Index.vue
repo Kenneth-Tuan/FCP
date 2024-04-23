@@ -1,5 +1,5 @@
 <template>
-  <div class="u-mxauto u-max-w1440px">
+  <div class="u-mxauto u-pt50px">
     <div class="u-w100% u-hmax u-relative u-mb60px">
       <div class="u-c-fcp-gray u-absolute u-top-45% u-left-10%">
         <p class="u-flex u-flex-row u-items-center u-justify-start">
@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="u-pl60px u-mb60px">
+    <div class="u-px60px u-mb60px">
       <FCPSubtitle
         subtitleMsg="FCP工人訓練方向"
         description="Training Contents"
@@ -21,19 +21,6 @@
       />
 
       <KCarousel class="u-mb120px" :items="main">
-        <!-- <template #item="{ cn, en, icon }"> // for testing
-          <div class="item">
-            <div class="">
-              <FCPIcon :name="icon || 'FCP-icon-Developing Ministries'" />
-              <p>
-                <span>{{ cn || "工人領命塑造" }}</span>
-                <span>
-                  {{ en || "Spiritual Life and Character Formation" }}
-                </span>
-              </p>
-            </div>
-          </div>
-        </template> -->
         <template #item="{ title, en, icon, description, index }">
           <div
             class="u-relative u-h400px u-flex u-flex-row u-justify-end u-items-start"
@@ -49,15 +36,18 @@
                 >
                   #{{ index + 1 }}
                 </div>
+
                 <FCPIcon
                   :name="icon"
                   class="u-w70% u-aspect-ratio-1 u-p5% u-rounded-100% u-bg-white u-mb24px"
                 />
+
                 <span class="u-c-white u-font-bold u-text-36px">{{
                   title || "工人靈命塑造"
                 }}</span>
               </div>
             </div>
+
             <div
               class="u-h400px u-mt60px u-pl180px u-pt48px u-pr24px u-pb24px u-bg-fcp-gray u-w80% u-rounded-[0_0_0_60px] u-overflow-hidden"
             >
@@ -75,6 +65,7 @@
                   {{ en || "Spiritual Life and Character Formation" }}
                 </span>
               </p>
+
               <p class="u-c-fcp-black u-text-24px u-pl24px">
                 {{ description }}
               </p>
@@ -84,7 +75,7 @@
       </KCarousel>
 
       <div
-        class="u-grid u-grid-cols-2 u-grid-rows-4 u-grid-gap-24px u-items-center u-mb80px"
+        class="u-grid lg:u-grid-cols-2 md:u-grid-cols-1 u-grid-rows-4 u-grid-gap-24px u-items-center u-mb80px"
       >
         <div
           v-for="(item, index) in items"
@@ -122,7 +113,7 @@
         </div>
       </div>
 
-      <FCPSubtitle
+      <!-- <FCPSubtitle
         subtitleMsg="FCP的學制類別"
         description="Programs OOffered by FCP"
         class="u-mb36px"
@@ -272,7 +263,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

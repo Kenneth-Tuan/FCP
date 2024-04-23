@@ -1,12 +1,12 @@
 <script setup>
 import { onMounted } from "vue";
-import CircleType from "circletype";
+// import CircleType from "circletype";
 
 import CTA from "@/assets/img/CTA-image.png";
 
-onMounted(() => {
-  const text = new CircleType(document.querySelector("#test"));
-});
+// onMounted(() => {
+//   const text = new CircleType(document.querySelector("#test"));
+// });
 </script>
 
 <template>
