@@ -1,5 +1,9 @@
 <script setup>
+import { ref } from "vue";
+
 import FCPBtnDropDown from "@/components/FCPBtnDropDown.vue";
+
+const menuToggle = ref(false);
 </script>
 
 <template>
@@ -154,8 +158,181 @@ import FCPBtnDropDown from "@/components/FCPBtnDropDown.vue";
       }"
     />
 
-    <q-btn flat icon="menu" :class="{ 'lg:u-hidden sm:u-block': 'display' }" />
+    <q-btn
+      flat
+      icon="menu"
+      :class="{ 'lg:u-hidden sm:u-block': 'display' }"
+      @click="menuToggle = !menuToggle"
+    />
   </q-toolbar>
+
+  <q-dialog
+    v-model="menuToggle"
+    persistent
+    :maximized="true"
+    transition-show="fade"
+    transition-hide="fade"
+  >
+    <q-card class="u-bg-#3E3E40 text-white">
+      <div class="u-h50px u-flex u-justify-between u-px8px">
+        <q-btn
+          flat
+          :class="{
+            'u-text-24px u-fw900': 'text',
+            'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
+          }"
+          v-close-popup
+          @click="$router.push({ name: 'Main' })"
+          padding="0 8px"
+          label="FCP"
+        />
+        <q-btn flat icon="close" v-close-popup />
+      </div>
+
+      <q-card-section>
+        <q-list
+          :bordered="false"
+          class="u-flex u-flex-col u-items-start u-flex-gap-y-16px u-text-left"
+        >
+          <q-expansion-item
+            expand-icon-toggle
+            v-close-popup
+            :content-inset-level="1"
+          >
+            <template v-slot:header>
+              <q-item @click="() => {}" clickable v-ripple v-close-popup>
+                <q-item-section>
+                  <q-item-label overline class="u-c-white"
+                    >關於我們</q-item-label
+                  >
+                  <q-item-label caption class="u-c-white"
+                    >About us</q-item-label
+                  >
+                </q-item-section>
+              </q-item>
+            </template>
+
+            <q-item clickable v-ripple v-close-popup>
+              <q-item-section>
+                <q-item-label overline class="u-c-white">一對一</q-item-label>
+                <q-item-label caption class="u-c-white">1 vs 1</q-item-label>
+              </q-item-section>
+            </q-item>
+          </q-expansion-item>
+
+          <q-expansion-item expand-icon-toggle :content-inset-level="1">
+            <template v-slot:header>
+              <q-item
+                @click="$router.push({ name: 'Programs' })"
+                clickable
+                v-ripple
+                v-close-popup
+              >
+                <q-item-section>
+                  <q-item-label overline class="u-c-white"
+                    >FCP 訓練</q-item-label
+                  >
+                  <q-item-label caption class="u-c-white"
+                    >Programs</q-item-label
+                  >
+                </q-item-section>
+              </q-item>
+            </template>
+
+            <q-item
+              @click="$router.push({ name: 'full_course' })"
+              clickable
+              v-ripple
+              v-close-popup
+            >
+              <q-item-section>
+                <q-item-label overline class="u-c-white"
+                  >實體全修班</q-item-label
+                >
+                <q-item-label caption class="u-c-white"
+                  >In Person Full Course</q-item-label
+                >
+              </q-item-section>
+            </q-item>
+
+            <div class="u-py16px u-px32px">
+              <q-item
+                @click="$router.push({ name: 'online_elective_course' })"
+                clickable
+                v-ripple
+                v-close-popup
+              >
+                <q-item-section>
+                  <q-item-label overline class="u-c-white"
+                    >線上選修班</q-item-label
+                  >
+                  <q-item-label caption class="u-c-white"
+                    >Online Elective Course</q-item-label
+                  >
+                </q-item-section>
+              </q-item>
+            </div>
+
+            <q-item
+              @click="$router.push({ name: 'free_elective_course' })"
+              clickable
+              v-ripple
+              v-close-popup
+            >
+              <q-item-section>
+                <q-item-label overline class="u-c-white"
+                  >自由選課班</q-item-label
+                >
+                <q-item-label caption class="u-c-white"
+                  >Free Elective Course</q-item-label
+                >
+              </q-item-section>
+            </q-item>
+          </q-expansion-item>
+
+          <q-item
+            @click="$router.push({ name: 'Events' })"
+            clickable
+            v-ripple
+            v-close-popup
+          >
+            <q-item-section>
+              <q-item-label overline class="u-c-white">最新消息</q-item-label>
+              <q-item-label caption class="u-c-white">Events</q-item-label>
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple v-close-popup>
+            <q-item-section>
+              <q-item-label overline class="u-c-white"
+                >穆宣國度視窗</q-item-label
+              >
+              <q-item-label caption class="u-c-white">Source</q-item-label>
+            </q-item-section>
+          </q-item>
+
+          <q-item
+            @click="$router.push({ name: 'ContactUs' })"
+            clickable
+            v-ripple
+            v-close-popup
+          >
+            <q-item-section>
+              <q-item-label overline class="u-c-white">聯絡我們</q-item-label>
+              <q-item-label caption class="u-c-white">Contact Us</q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </q-card-section>
+    </q-card>
+  </q-dialog>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+:deep(.q-expansion-item__container) {
+  border: 0px solid black;
+  .q-item__label--caption {
+    color: white;
+  }
+}
+</style>
