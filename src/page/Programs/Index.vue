@@ -20,10 +20,11 @@
         class="u-mb36px"
       />
 
-      <KCarousel class="u-mb120px" :items="main">
+      <KCarousel class="lg:u-mb120px sm:u-mb10%" :items="main">
         <template #item="{ title, en, icon, description, index }">
           <div
-            class="u-relative u-h400px u-flex u-flex-row u-justify-end u-items-start"
+            class="u-relative u-h400px u-flex-row u-justify-end u-items-start"
+            :class="{ 'lg:u-flex sm:u-hidden': 'display' }"
           >
             <div
               class="u-absolute u-top-0 u-left-0 u-bg-fcp-yellow u-w30% u-aspect-ratio-1 u-z-1 u-flex u-flex-col u-justify-center u-items-center u-rounded-[0_30%_0_30%]"
@@ -70,6 +71,36 @@
                 {{ description }}
               </p>
             </div>
+          </div>
+
+          <div
+            :class="{
+              'sm:u-block lg:u-hidden u-overflow-hidden': 'display',
+              'u-rounded-24px u-aspect-ratio-4/3': 'shape',
+              'u-bg-fcp-gray': 'color',
+              'u-p2% u-flex u-flex-col u-flex-gap-y-24px': 'spacing',
+            }"
+          >
+            <div
+              class="u-w80% u-mxauto u-bg-fcp-yellow u-p2% u-flex u-flex-col u-justify-start u-items-center u-rounded-24px"
+            >
+              <FCPIcon
+                :name="icon"
+                class="u-w30% u-aspect-ratio-1 u-p5% u-rounded-100% u-bg-white"
+              />
+
+              <span class="u-c-white u-font-bold u-text-24px">{{
+                title || "工人靈命塑造"
+              }}</span>
+            </div>
+
+            <p
+              class="u-p5% u-text-18px u-c-fcp-blue u-font-unbounded u-fw700 u-tracking-0.05em u-text-center"
+            >
+              {{ en }}
+            </p>
+
+            <p class="u-c-fcp-black u-text-14px u-p5%">{{ description }}</p>
           </div>
         </template>
       </KCarousel>

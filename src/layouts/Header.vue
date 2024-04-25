@@ -18,6 +18,13 @@ const menuToggle = ref(false);
   >
     <q-btn
       flat
+      icon="menu"
+      :class="{ 'md:u-hidden sm:u-block': 'display' }"
+      @click="menuToggle = !menuToggle"
+    />
+
+    <q-btn
+      flat
       :class="{
         'u-text-24px u-fw900': 'text',
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
@@ -66,6 +73,7 @@ const menuToggle = ref(false);
           <q-item-label>實體全修班</q-item-label>
         </q-item-section>
       </q-item>
+
       <q-item
         @click="$router.push({ name: 'online_elective_course' })"
         clickable
@@ -75,6 +83,7 @@ const menuToggle = ref(false);
           <q-item-label>線上選修班</q-item-label>
         </q-item-section>
       </q-item>
+
       <q-item
         @click="$router.push({ name: 'free_elective_course' })"
         clickable
@@ -157,24 +166,18 @@ const menuToggle = ref(false);
         'md:u-px4px lg:u-px12px': 'spacing',
       }"
     />
-
-    <q-btn
-      flat
-      icon="menu"
-      :class="{ 'lg:u-hidden sm:u-block': 'display' }"
-      @click="menuToggle = !menuToggle"
-    />
   </q-toolbar>
 
   <q-dialog
     v-model="menuToggle"
-    persistent
     :maximized="true"
     transition-show="fade"
     transition-hide="fade"
+    :position="'left'"
   >
     <q-card class="u-bg-#3E3E40 text-white">
-      <div class="u-h50px u-flex u-justify-between u-px8px">
+      <div class="u-h50px u-flex u-justify-start u-px8px">
+        <q-btn flat icon="close" v-close-popup />
         <q-btn
           flat
           :class="{
@@ -186,7 +189,6 @@ const menuToggle = ref(false);
           padding="0 8px"
           label="FCP"
         />
-        <q-btn flat icon="close" v-close-popup />
       </div>
 
       <q-card-section>
@@ -255,23 +257,21 @@ const menuToggle = ref(false);
               </q-item-section>
             </q-item>
 
-            <div class="u-py16px u-px32px">
-              <q-item
-                @click="$router.push({ name: 'online_elective_course' })"
-                clickable
-                v-ripple
-                v-close-popup
-              >
-                <q-item-section>
-                  <q-item-label overline class="u-c-white"
-                    >線上選修班</q-item-label
-                  >
-                  <q-item-label caption class="u-c-white"
-                    >Online Elective Course</q-item-label
-                  >
-                </q-item-section>
-              </q-item>
-            </div>
+            <q-item
+              @click="$router.push({ name: 'online_elective_course' })"
+              clickable
+              v-ripple
+              v-close-popup
+            >
+              <q-item-section>
+                <q-item-label overline class="u-c-white"
+                  >線上選修班</q-item-label
+                >
+                <q-item-label caption class="u-c-white"
+                  >Online Elective Course</q-item-label
+                >
+              </q-item-section>
+            </q-item>
 
             <q-item
               @click="$router.push({ name: 'free_elective_course' })"
@@ -296,14 +296,14 @@ const menuToggle = ref(false);
             v-ripple
             v-close-popup
           >
-            <q-item-section>
+            <q-item-section class="u-px16px">
               <q-item-label overline class="u-c-white">最新消息</q-item-label>
               <q-item-label caption class="u-c-white">Events</q-item-label>
             </q-item-section>
           </q-item>
 
           <q-item clickable v-ripple v-close-popup>
-            <q-item-section>
+            <q-item-section class="u-px16px">
               <q-item-label overline class="u-c-white"
                 >穆宣國度視窗</q-item-label
               >
@@ -317,7 +317,7 @@ const menuToggle = ref(false);
             v-ripple
             v-close-popup
           >
-            <q-item-section>
+            <q-item-section class="u-px16px">
               <q-item-label overline class="u-c-white">聯絡我們</q-item-label>
               <q-item-label caption class="u-c-white">Contact Us</q-item-label>
             </q-item-section>
