@@ -90,7 +90,7 @@ const menuToggle = ref(false);
         v-close-popup
       >
         <q-item-section>
-          <q-item-label>自由選課班</q-item-label>
+          <q-item-label>自由選課生</q-item-label>
         </q-item-section>
       </q-item>
     </FCPBtnDropDown>
@@ -281,7 +281,7 @@ const menuToggle = ref(false);
             >
               <q-item-section>
                 <q-item-label overline class="u-c-white"
-                  >自由選課班</q-item-label
+                  >自由選課生</q-item-label
                 >
                 <q-item-label caption class="u-c-white"
                   >Free Elective Course</q-item-label

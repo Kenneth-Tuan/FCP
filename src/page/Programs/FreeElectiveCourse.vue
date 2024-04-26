@@ -10,7 +10,7 @@
         </p>
         <p class="u-flex u-flex-row u-text-48px u-pl24px u-fw900">
           <span class="u-c-fcp-yellow">自由</span>
-          選課班
+          選課生
         </p>
       </div>
 

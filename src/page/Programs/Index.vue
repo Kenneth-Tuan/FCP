@@ -144,7 +144,7 @@
         </div>
       </div>
 
-      <!-- <FCPSubtitle
+      <FCPSubtitle
         subtitleMsg="FCP的學制類別"
         description="Programs OOffered by FCP"
         class="u-mb36px"
@@ -152,15 +152,25 @@
 
       <div class="u-w100% u-flex u-flex-col u-items-center">
         <div
-          class="u-w960px u-bg-fcp-green u-relative u-rounded-[100px_0_0_0] u-mb24px"
+          class="u-w80% lg:u-h222px sm:u-min-h222px sm:u-hauto u-bg-fcp-green u-relative u-rounded-[100px_0_0_0] u-mb32px u-overflow-hidden"
         >
-          <div class="u-pl60px u-py40px">
-            <p class="u-c-white u-text-48px">
+          <div
+            class="u-pl60px u-py40px u-absolute u-z-2"
+            :class="[
+              {
+                'u-h100% u-w100% ': 'size',
+                'u-flex u-flex-col u-items-left u-justify-center': 'layout',
+                'u-absolute u-z-2': 'pos',
+              },
+              'u-c-white md-hover:u-backdrop-blur-3 md:u-backdrop-blur-0 sm:u-backdrop-blur-3',
+            ]"
+          >
+            <p class="u-c-white u-text-48px u-text-nowrap">
               <span>實體</span>
               <span class="u-font-bold">全修班</span>
             </p>
             <div
-              class="u-flex u-flex-row u-justify-start u-c-white u-flex-gap-x-16px"
+              class="u-flex u-flex-row u-flex-wrap u-justify-start u-c-white u-flex-gap-x-16px"
             >
               <div class="u-flex u-flex-col u-items-center u-justify-center">
                 <span class="u-fw900 u-text-24px">4個月</span>
@@ -189,6 +199,10 @@
             </div>
           </div>
 
+          <div class="u-h100% u-absolute u-z-1 u-top-0 u-right-0">
+            <img :src="inPersonCourseImg" alt="" class="u-h100%" />
+          </div>
+
           <div
             class="u-w100% u-bg-white u-h16px u-absolute u-z-2 u-bottom-0"
           ></div>
@@ -209,25 +223,49 @@
           </div>
         </div>
 
-        <div class="u-w960px u-h220px u-flex u-flex-row u-flex-gap-x-32px">
+        <div
+          class="u-w80% u-flex lg:u-flex-row lg:u-flex-gap-x-32px sm:u-flex-col sm:u-flex-gap-y-32px"
+        >
           <div
-            class="u-bg-fcp-green u-flex-1 u-flex u-flex-row u-justify-end u-rounded-[100px_0_0_0] u-relative"
+            :class="[
+              {
+                'u-flex lg:u-flex-1 lg:u-justify-end lg:u-items-start sm:u-justify-center sm:u-items-center':
+                  'layout',
+                'u-relative': 'pos',
+              },
+              'u-bg-fcp-green u-overflow-hidden u-h220px u-rounded-[100px_0_0_0]',
+            ]"
           >
-            <div class="u-flex u-flex-col u-items-center u-c-white u-mr24px">
+            <div
+              :class="[
+                {
+                  'u-h100% u-w100% ': 'size',
+                  'u-flex u-flex-col u-items-center u-justify-center': 'layout',
+                  'u-absolute u-z-2': 'pos',
+                },
+                'u-c-white md-hover:u-backdrop-blur-3 md:u-backdrop-blur-0 sm:u-backdrop-blur-3',
+              ]"
+            >
               <p class="u-text-48px">
                 <span>線上</span>
                 <span class="u-font-bold">選修班</span>
               </p>
-              <p
-                class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center u-mb12px"
-              >
-                一年兩學期制
-              </p>
-              <p
-                class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center"
-              >
-                訪宣補助
-              </p>
+              <div class="u-flex lg:u-flex-col sm:u-flex-row u-flex-gap-12px">
+                <p
+                  class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center"
+                >
+                  一年兩學期制
+                </p>
+                <p
+                  class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center"
+                >
+                  訪宣補助
+                </p>
+              </div>
+            </div>
+
+            <div class="u-h100% u-absolute u-z-1 u-left-0">
+              <img :src="onlineCourseImg" alt="" class="u-h100%" />
             </div>
 
             <div
@@ -253,23 +291,45 @@
           </div>
 
           <div
-            class="u-bg-fcp-green u-flex-1 u-flex u-flex-row u-justify-end u-rounded-[100px_0_0_0] u-relative"
+            :class="[
+              {
+                'u-flex lg:u-flex-1 lg:u-justify-end lg:u-items-start sm:u-justify-center sm:u-items-center':
+                  'layout',
+                'u-relative': 'pos',
+              },
+              'u-bg-fcp-green u-overflow-hidden u-h220px u-rounded-[100px_0_0_0]',
+            ]"
           >
-            <div class="u-flex u-flex-col u-items-center u-c-white u-mr24px">
+            <div
+              :class="[
+                {
+                  'u-h100% u-w100% ': 'size',
+                  'u-flex u-flex-col u-items-center u-justify-center': 'layout',
+                  'u-absolute u-z-2': 'pos',
+                },
+                'u-c-white md-hover:u-backdrop-blur-3 md:u-backdrop-blur-0 sm:u-backdrop-blur-3',
+              ]"
+            >
               <p class="u-c-white u-text-48px">
                 <span>自由</span>
-                <span class="u-font-bold">選課班</span>
+                <span class="u-font-bold">選課生</span>
               </p>
-              <p
-                class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center u-mb12px"
-              >
-                無期限學習
-              </p>
-              <p
-                class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center"
-              >
-                隨處隨時進修
-              </p>
+              <div class="u-flex lg:u-flex-col sm:u-flex-row u-flex-gap-12px">
+                <p
+                  class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center"
+                >
+                  無期限學習
+                </p>
+                <p
+                  class="u-bg-fcp-blue u-px8px u-text-nowrap u-fw600 u-w115px u-text-center"
+                >
+                  隨處隨時進修
+                </p>
+              </div>
+            </div>
+
+            <div class="u-h100% u-absolute u-z-1 u-left-0">
+              <img :src="freeCourseImg" alt="" class="u-h100%" />
             </div>
 
             <div
@@ -294,7 +354,7 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
@@ -305,6 +365,9 @@ import { computed, defineAsyncComponent } from "vue";
 import FCPSubtitle from "@/components/FCPSubtitle.vue";
 import Banner from "@/assets/img/programs/programs_page.png";
 import KCarousel from "@/components/KCarousel.vue";
+import inPersonCourseImg from "@/assets/img/programs/inPersonCourse.png";
+import onlineCourseImg from "@/assets/img/programs/onlineCourse.png";
+import freeCourseImg from "@/assets/img/programs/freeCourse.png";
 
 const items = computed(() => [
   {
