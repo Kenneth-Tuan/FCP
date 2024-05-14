@@ -1,6 +1,6 @@
 <template>
-  <div class="u-mxauto u-max-w1440px">
-    <div class="u-wmax u-hmax u-relative u-mb60px">
+  <div class="u-mxauto u-pt50px">
+    <div class="u-w100% u-hmax u-relative u-mb60px">
       <div class="u-c-fcp-gray u-absolute u-top-45% u-left-10%">
         <p class="u-flex u-flex-row u-items-center u-justify-start">
           <span class="u-font-bold u-tracking-0.2em">聯絡我們&nbsp;</span>
@@ -8,10 +8,10 @@
         </p>
         <span class="u-font-unbounded u-text-22px">CONTACT US</span>
       </div>
-      <img :src="Banner" alt="" />
+      <img :src="Banner" alt="" class="u-w100%" />
     </div>
 
-    <div class="u-pl60px u-mb60px">
+    <div class="u-px60px u-mb60px">
       <FCPSubtitle
         subtitleMsg="聯絡資訊｜留言表單"
         description="Get in Touch"
