@@ -1,5 +1,7 @@
 <template>
-  <div class="u-w600px u-aspect-ratio-3/4 u-flex u-flex-col u-items-center">
+  <div
+    class="u-max-w600px u-min-w200px u-aspect-ratio-3/4 u-flex u-flex-col u-items-center"
+  >
     <div
       class="u-group u-w100% u-h50% u-overflow-hidden u-aspect-ratio-4/3 u-rounded-[100px_0_0_0] u-bg-fcp-blue u-relative u-cursor-pointer u-mb24px"
     >
@@ -40,7 +42,7 @@ import postImg from "@/assets/img/events/postImg.jpeg";
 
 const props = defineProps({
   postImg: String,
-  tyle: String,
+  type: String,
   title: String,
   description: String,
 });

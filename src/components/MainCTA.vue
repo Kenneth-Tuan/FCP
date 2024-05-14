@@ -30,18 +30,16 @@ import CTA from "@/assets/img/CTA-image.png";
         點我瞭解報名資訊 · JOIN FCP ·
       </div>
     </q-btn> -->
-    <q-btn
-      rounded
-      push
-      padding="10px 24px"
-      class="u-absolute u-z-1 u-backdrop-blur-10 u-bottom-1% u-left-50% u-translate--50%"
-    >
-      <p
-        class="lg:u-text-36px lg:u-lh-36px sm:u-text-18px u-font-bold u-c-white u-text-nowrap"
-      >
-        點我瞭解報名資訊 <br />· JOIN FCP ·
-      </p>
-    </q-btn>
+    <div class="u-absolute u-z-1 u-bottom-1% u-left-50% u-translate--50%">
+      <q-btn rounded push padding="10px 24px" class="u-backdrop-blur-10">
+        <p
+          class="lg:u-text-36px lg:u-lh-36px sm:u-text-18px u-font-bold u-c-white u-text-nowrap"
+        >
+          點我瞭解報名資訊 <br />· JOIN FCP ·
+        </p>
+      </q-btn>
+    </div>
+
     <div
       class="u-w100% u-h100% u-absolute u-bg-gradient-to-t u-from-white u-to-fcp-black u-opacity-20"
     ></div>
