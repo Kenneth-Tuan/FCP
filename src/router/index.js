@@ -7,6 +7,7 @@ import InPersonFullCourse from "@/page/Programs/InPersonFullCourse.vue";
 import OnlineElectiveCourse from "@/page/Programs/OnlineElectiveCourse.vue";
 import FreeElectiveCourse from "@/page/Programs/FreeElectiveCourse.vue";
 import ContactUs from "@/page/ContactUs/Index.vue";
+import AboutUs from "@/page/About/Index.vue";
 import { i18n, updateLang } from "@/locales/index";
 
 const {
@@ -74,6 +75,11 @@ const routes = [
             component: FreeElectiveCourse,
           },
         ],
+      },
+      {
+        path: "FCP/about-us",
+        name: "AboutUs",
+        component: AboutUs,
       },
     ],
   },

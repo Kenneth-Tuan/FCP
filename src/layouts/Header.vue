@@ -38,6 +38,7 @@ const menuToggle = ref(false);
     <FCPBtnDropDown
       label="關於我們"
       flat
+      @click="$router.push({ name: 'AboutUs' })"
       :class="{
         'sm:u-hidden md:u-block': 'display',
         'u-text-nowrap': 'text',
