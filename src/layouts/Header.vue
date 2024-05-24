@@ -1,5 +1,9 @@
 <script setup>
 import { ref } from "vue";
+import LINE from "@/assets/icons/LINE.png";
+import IG from "@/assets/icons/IG.png";
+import FB from "@/assets/icons/FB.png";
+import FCP_LOGO from "@/assets/icons/FCP-logo-en.png";
 
 import FCPBtnDropDown from "@/components/FCPBtnDropDown.vue";
 
@@ -10,29 +14,24 @@ const menuToggle = ref(false);
   <q-toolbar
     :class="{
       'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
-      'u-w100% u-h36px': 'layout',
-      'shadow-2 u-px8px': 'style',
+      'u-w100% u-h36px md:u-px8px! sm:u-pr0!': 'layout',
+      'shadow-2 u-px8px u-overflow-hidden': 'style',
       'u-fixed u-z-99': 'position',
       'u-c-white u-bg-#3E3E40': 'color',
     }"
   >
     <q-btn
       flat
-      icon="menu"
-      :class="{ 'md:u-hidden sm:u-block': 'display' }"
-      @click="menuToggle = !menuToggle"
-    />
-
-    <q-btn
-      flat
+      stretch
       :class="{
         'u-text-24px u-fw900': 'text',
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
       }"
       @click="$router.push({ name: 'Main' })"
       padding="0 8px"
-      label="FCP"
-    />
+    >
+      <q-img :src="FCP_LOGO" spinner-color="white" class="u-w36px" :ratio="1" />
+    </q-btn>
 
     <q-separator dark vertical inset :class="{ 'u-mx8px': 'spacing' }" />
 
@@ -166,6 +165,17 @@ const menuToggle = ref(false);
         'md:u-px4px lg:u-px12px': 'spacing',
       }"
     />
+    <q-btn
+      flat
+      stretch
+      :class="{
+        'md:u-hidden sm:u-block u-bg-fcp-yellow': 'display',
+        'u-flex u-flex-row u-justify-center u-items-center': 'layout',
+      }"
+      @click="menuToggle = !menuToggle"
+    >
+      <q-icon name="menu" />
+    </q-btn>
   </q-toolbar>
 
   <q-dialog
@@ -173,11 +183,9 @@ const menuToggle = ref(false);
     :maximized="true"
     transition-show="fade"
     transition-hide="fade"
-    :position="'left'"
   >
     <q-card class="u-bg-#3E3E40 text-white">
-      <div class="u-h50px u-flex u-justify-start u-px8px">
-        <q-btn flat icon="close" v-close-popup />
+      <div class="u-h50px u-flex u-justify-between u-px0">
         <q-btn
           flat
           :class="{
@@ -188,6 +196,16 @@ const menuToggle = ref(false);
           @click="$router.push({ name: 'Main' })"
           padding="0 8px"
           label="FCP"
+        />
+        <q-btn
+          flat
+          icon="close"
+          v-close-popup
+          :class="{
+            'u-bg-fcp-yellow': 'display',
+            'u-flex u-flex-row u-justify-center u-items-center': 'layout',
+            'u-rounded-0': 'shape',
+          }"
         />
       </div>
 
@@ -324,6 +342,43 @@ const menuToggle = ref(false);
           </q-item>
         </q-list>
       </q-card-section>
+
+      <q-separator inset class="u-px2% u-my24px u-bg-gray" />
+
+      <q-card-actions>
+        <div
+          :class="[
+            {
+              'lg:u-grid lg:u-grid-cols-3 sm:u-flex sm:u-flex-col sm:u-items-center sm:u-flex-gap-y-16px':
+                'layout',
+              ' u-w100%': 'size',
+            },
+          ]"
+        >
+          <div
+            class="u-col-start-2 u-col-span-1 u-flex u-flex-row u-justify-center u-flex-gap-24px"
+          >
+            <img
+              :src="LINE"
+              alt=""
+              srcset=""
+              class="u-h-48px u-cursor-pointer"
+            />
+            <img :src="IG" alt="" srcset="" class="u-h-48px u-cursor-pointer" />
+            <img :src="FB" alt="" srcset="" class="u-h-48px u-cursor-pointer" />
+          </div>
+
+          <div class="u-col-span-1 u-flex u-flex-col u-items-end u-c-gray">
+            <p class="u-w307px u-font-unbounded">Email: eqiup.fcp@gmail.com</p>
+            <p class="u-w307px u-flex u-flex-col u-items-end">
+              <span class="u-font-unbounded">
+                Tel.02-23518797 / 0952-067030
+              </span>
+              <span class="u-font-light"> (*請洽Karen傳道) </span>
+            </p>
+          </div>
+        </div>
+      </q-card-actions>
     </q-card>
   </q-dialog>
 </template>
