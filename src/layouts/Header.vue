@@ -221,7 +221,12 @@ const menuToggle = ref(false);
             :content-inset-level="1"
           >
             <template v-slot:header>
-              <q-item @click="() => {}" clickable v-ripple v-close-popup>
+              <q-item
+                @click="$router.push({ name: 'AboutUs' })"
+                clickable
+                v-ripple
+                v-close-popup
+              >
                 <q-item-section>
                   <q-item-label overline class="u-c-white"
                     >關於我們</q-item-label
