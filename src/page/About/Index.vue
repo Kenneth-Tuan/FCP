@@ -110,12 +110,42 @@
         />
       </div>
     </div>
+
+    <div
+      class="u-relative u-aspect-ratio-16/9 u-flex u-flex-col u-flex-gap-y-16px u-pt24px u-overflow-hidden"
+    >
+      <div class="u-mxauto">
+        <q-btn
+          class="u-bg-fcp-green u-c-fcp-gray u-rounded-[30px_0] u-px24px!"
+          icon-right="touch_app"
+          noCaps
+        >
+          <p class="u-text-left">
+            <span class="u-fw700 u-tracking-0.2em u-text-18px"
+              >一對一諮詢預約登記表</span
+            ><br />
+            <span class="u-tracking-0.1em">One·on·One Consultation</span>
+          </p>
+        </q-btn>
+      </div>
+      <div class="u-px5%">
+        <q-separator class="u-bg-fcp-gray" size="1.5px" />
+        <p class="u-c-fcp-gray">{{ oneOnOneConsultationDescription }}</p>
+        <q-separator class="u-bg-fcp-gray" size="1.5px" />
+      </div>
+      <q-img
+        class="u-absolute u-top-0 u-left-0 u-z--1 u-opacity-80"
+        :src="Poster2"
+        :ratio="16 / 9"
+      />
+    </div>
   </div>
 </template>
 
 <script setup lang="js">
 import FCPSubtitle from "@/components/FCPSubtitle.vue";
 import Banner from "@/assets/img/about/about_page.png";
+import Poster2 from '@/assets/img/about/about_poster_2.jpeg'
 import Feature1 from "@/assets/img/about/實體全修班｜七個月課程.jpeg"
 import Feature2 from "@/assets/img/about/FCP課程介紹.jpeg"
 import Feature3 from '@/assets/img/about/FCP五大面向課程.jpeg'
@@ -128,6 +158,16 @@ const coreValuesInfo = [
   {title: '團隊', description: '看重工人恩慈發展配搭，恩慈相待的團隊關係。'},
   {title: '夥伴', description: '看重與教會、神學院、機構、工場團隊夥伴關係。'},
 ]
+
+const mentersInfo = [
+  {
+    name: '大樹 牧師',
+    description: ['前線差會訓練中心創辦人暨執行長', '中華福音神學院跨文化宣教博士班研究', '國立政治大學中東、中亞所研究', '為資深宣教士、穆宣訓練專員', '現任中華福音神學院穆光研訓中心主任', '台灣前線差會創辦人暨總幹事'],
+    remarks: '宣教士格言：「為主不保留、不退縮、不後悔。 No Reserves, No Retreats, No Regret.」(Willan W Bordan, 1887 - 1913)'
+  }
+]
+
+const oneOnOneConsultationDescription = `穆宣禾場遍佈全球、極為龐大、不同的區域使用的語言、文化、處境都有所不同，每一位穆宣工人的呼召使命與需要面對的文化處境也不同，因此所需要的預備也不盡相同；FCP希望能幫助已領受穆宣異象的您，找到最合適您量身訂製回應呼召的下一步計畫。一對一諮詢服務，不僅讓我們彼此更認識，同時能共同了解FCP訓練是否是現階段最適合您的培訓計畫。`
 </script>
 
 <style lang="scss" scoped>
