@@ -8,7 +8,7 @@ import Feature1 from "@/assets/img/about/實體全修班｜七個月課程.jpeg"
 import Feature2 from "@/assets/img/about/FCP課程介紹.jpeg"
 import Feature3 from '@/assets/img/about/FCP五大面向課程.jpeg'
 import pastor_tree from '@/assets/img/about/Pastor-Tree.jpeg'
-import pastor_tsai from '@/assets/img/about/Pastor-Tsai.jpeg'
+import pastor_tsai from '@/assets/img/about/Pastor-TSAI.jpeg'
 import pastor_yc from '@/assets/img/about/Pastor-YC.jpeg'
 
 
