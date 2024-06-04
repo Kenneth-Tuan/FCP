@@ -108,6 +108,7 @@ const menuToggle = ref(false);
     />
 
     <q-btn
+      v-if="false"
       flat
       label="穆宣國度視窗"
       :class="{
@@ -145,6 +146,7 @@ const menuToggle = ref(false);
     <q-btn
       flat
       icon="search"
+      @click="$router.push({ name: 'Search' })"
       :class="{
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
         'md:u-px4px lg:u-px12px': 'spacing',
@@ -326,7 +328,7 @@ const menuToggle = ref(false);
             </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple v-close-popup>
+          <q-item v-if="false" clickable v-ripple v-close-popup>
             <q-item-section class="u-px16px">
               <q-item-label overline class="u-c-white"
                 >穆宣國度視窗</q-item-label

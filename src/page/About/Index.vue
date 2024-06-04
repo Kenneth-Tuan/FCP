@@ -1,3 +1,53 @@
+<script setup lang="js">
+import { ref } from 'vue'
+
+import FCPSubtitle from "@/components/FCPSubtitle.vue";
+import Banner from "@/assets/img/about/about_page.png";
+import Poster2 from '@/assets/img/about/about_poster_2.jpeg'
+import Feature1 from "@/assets/img/about/實體全修班｜七個月課程.jpeg"
+import Feature2 from "@/assets/img/about/FCP課程介紹.jpeg"
+import Feature3 from '@/assets/img/about/FCP五大面向課程.jpeg'
+import pastor_tree from '@/assets/img/about/Pastor-Tree.jpeg'
+import pastor_tsai from '@/assets/img/about/Pastor-Tsai.jpeg'
+import pastor_yc from '@/assets/img/about/Pastor-YC.jpeg'
+
+
+const coreValuesInfo = [
+  {title: '專注', description: '專注於穆斯林歸主運動，致力在群體中建立教會。'},
+  {title: '專業', description: '專業訓練裝備工人能力，穆宣禾場有效完成任務。'},
+  {title: '品格', description: '看重工人生命品格門訓，工人品格與事奉生命。'},
+  {title: '團隊', description: '看重工人恩慈發展配搭，恩慈相待的團隊關係。'},
+  {title: '夥伴', description: '看重與教會、神學院、機構、工場團隊夥伴關係。'},
+]
+
+const slide = ref('tree')
+const mentersInfo = [
+  {
+    tag: 'tree',
+    name: '大樹 牧師',
+    descriptions: ['前線差會訓練中心創辦人暨執行長', '中華福音神學院跨文化宣教博士班研究', '國立政治大學中東、中亞所研究', '為資深宣教士、穆宣訓練專員', '現任中華福音神學院穆光研訓中心主任', '台灣前線差會創辦人暨總幹事'],
+    remarks: '宣教士格言：「為主不保留、不退縮、不後悔。 No Reserves, No Retreats, No Regret.」(Willan W Bordan, 1887 - 1913)',
+    avatar: pastor_tree
+  },
+  {
+    tag: 'tsai',
+    name: 'Tsai 牧師',
+    descriptions: ['前線差會訓練中心創辦人暨執行長', '中華福音神學院跨文化宣教博士班研究', '國立政治大學中東、中亞所研究', '為資深宣教士、穆宣訓練專員', '現任中華福音神學院穆光研訓中心主任', '台灣前線差會創辦人暨總幹事'],
+    remarks: '宣教士格言：「為主不保留、不退縮、不後悔。 No Reserves, No Retreats, No Regret.」(Willan W Bordan, 1887 - 1913)',
+    avatar: pastor_tsai
+  },
+  {
+    tag: 'yc',
+    name: 'YC 牧師',
+    descriptions: ['前線差會訓練中心創辦人暨執行長', '中華福音神學院跨文化宣教博士班研究', '國立政治大學中東、中亞所研究', '為資深宣教士、穆宣訓練專員', '現任中華福音神學院穆光研訓中心主任', '台灣前線差會創辦人暨總幹事'],
+    remarks: '宣教士格言：「為主不保留、不退縮、不後悔。 No Reserves, No Retreats, No Regret.」(Willan W Bordan, 1887 - 1913)',
+    avatar: pastor_yc
+  },
+]
+
+const oneOnOneConsultationDescription = `穆宣禾場遍佈全球、極為龐大、不同的區域使用的語言、文化、處境都有所不同，每一位穆宣工人的呼召使命與需要面對的文化處境也不同，因此所需要的預備也不盡相同；FCP希望能幫助已領受穆宣異象的您，找到最合適您量身訂製回應呼召的下一步計畫。一對一諮詢服務，不僅讓我們彼此更認識，同時能共同了解FCP訓練是否是現階段最適合您的培訓計畫。`
+</script>
+
 <template>
   <div class="u-mxauto u-pt50px">
     <div class="u-w100% u-hmax u-relative u-mb60px">
@@ -212,56 +262,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="js">
-import { ref } from 'vue'
-
-import FCPSubtitle from "@/components/FCPSubtitle.vue";
-import Banner from "@/assets/img/about/about_page.png";
-import Poster2 from '@/assets/img/about/about_poster_2.jpeg'
-import Feature1 from "@/assets/img/about/實體全修班｜七個月課程.jpeg"
-import Feature2 from "@/assets/img/about/FCP課程介紹.jpeg"
-import Feature3 from '@/assets/img/about/FCP五大面向課程.jpeg'
-import pastor_tree from '@/assets/img/about/Pastor-Tree.jpeg'
-import pastor_tsai from '@/assets/img/about/Pastor-Tsai.jpeg'
-import pastor_yc from '@/assets/img/about/Pastor-YC.jpeg'
-
-
-const coreValuesInfo = [
-  {title: '專注', description: '專注於穆斯林歸主運動，致力在群體中建立教會。'},
-  {title: '專業', description: '專業訓練裝備工人能力，穆宣禾場有效完成任務。'},
-  {title: '品格', description: '看重工人生命品格門訓，工人品格與事奉生命。'},
-  {title: '團隊', description: '看重工人恩慈發展配搭，恩慈相待的團隊關係。'},
-  {title: '夥伴', description: '看重與教會、神學院、機構、工場團隊夥伴關係。'},
-]
-
-const slide = ref('tree')
-const mentersInfo = [
-  {
-    tag: 'tree',
-    name: '大樹 牧師',
-    descriptions: ['前線差會訓練中心創辦人暨執行長', '中華福音神學院跨文化宣教博士班研究', '國立政治大學中東、中亞所研究', '為資深宣教士、穆宣訓練專員', '現任中華福音神學院穆光研訓中心主任', '台灣前線差會創辦人暨總幹事'],
-    remarks: '宣教士格言：「為主不保留、不退縮、不後悔。 No Reserves, No Retreats, No Regret.」(Willan W Bordan, 1887 - 1913)',
-    avatar: pastor_tree
-  },
-  {
-    tag: 'tsai',
-    name: 'Tsai 牧師',
-    descriptions: ['前線差會訓練中心創辦人暨執行長', '中華福音神學院跨文化宣教博士班研究', '國立政治大學中東、中亞所研究', '為資深宣教士、穆宣訓練專員', '現任中華福音神學院穆光研訓中心主任', '台灣前線差會創辦人暨總幹事'],
-    remarks: '宣教士格言：「為主不保留、不退縮、不後悔。 No Reserves, No Retreats, No Regret.」(Willan W Bordan, 1887 - 1913)',
-    avatar: pastor_tsai
-  },
-  {
-    tag: 'yc',
-    name: 'YC 牧師',
-    descriptions: ['前線差會訓練中心創辦人暨執行長', '中華福音神學院跨文化宣教博士班研究', '國立政治大學中東、中亞所研究', '為資深宣教士、穆宣訓練專員', '現任中華福音神學院穆光研訓中心主任', '台灣前線差會創辦人暨總幹事'],
-    remarks: '宣教士格言：「為主不保留、不退縮、不後悔。 No Reserves, No Retreats, No Regret.」(Willan W Bordan, 1887 - 1913)',
-    avatar: pastor_yc
-  },
-]
-
-const oneOnOneConsultationDescription = `穆宣禾場遍佈全球、極為龐大、不同的區域使用的語言、文化、處境都有所不同，每一位穆宣工人的呼召使命與需要面對的文化處境也不同，因此所需要的預備也不盡相同；FCP希望能幫助已領受穆宣異象的您，找到最合適您量身訂製回應呼召的下一步計畫。一對一諮詢服務，不僅讓我們彼此更認識，同時能共同了解FCP訓練是否是現階段最適合您的培訓計畫。`
-</script>
 
 <style lang="scss" scoped>
 .left-tags {

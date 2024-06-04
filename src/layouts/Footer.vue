@@ -81,7 +81,7 @@
           </div>
         </div>
 
-        <div class="u-col-span-1 u-flex u-flex-col u-items-start">
+        <div v-if="false" class="u-col-span-1 u-flex u-flex-col u-items-start">
           <div class="u-flex u-flex-col">
             <p class="u-text-20px u-fw-600 u-c-fcp-green u-font-unbounded">
               Resource

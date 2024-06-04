@@ -1,5 +1,5 @@
 <template>
-  <div class="u-mxauto u-pt50px">
+  <div class="u-pt50px">
     <div class="u-w100% u-hmax u-relative u-mb60px">
       <div class="u-c-fcp-gray u-absolute u-top-45% u-left-10%">
         <p class="u-flex u-flex-row u-items-center u-justify-start">
@@ -39,9 +39,12 @@
             <span>ADDRESS</span>
           </p>
           <q-separator class="u-w100px u-bg-fcp-gray" size="1.5px" />
-          <p class="u-text-24px u-flex u-flex-col u-items-center">
-            <span>待更新</span>
-            <span>（預備搬遷中）</span>
+          <p class="u-text-24px u-flex u-flex-col u-items-center u-text-center">
+            <span class="u-fw600">97061花蓮縣花蓮市中美路148號4樓</span>
+            <span class="u-text-16px">
+              4F No.148 Zhongmei Rd. Hualien City Hualian Country 970 Taiwan
+              (R.O.C)
+            </span>
           </p>
         </div>
         <div
@@ -65,9 +68,9 @@
           </p>
           <q-separator class="u-w100px u-bg-fcp-gray" size="1.5px" />
           <p class="u-text-24px u-flex u-flex-col u-items-center">
-            <span>02-23518797</span>
-            <span>0952-067030</span>
-            <span>（請洽Karen傳道）</span>
+            <span>TEL:(03)823-4640</span>
+            <span>FAX:(03)824-4641</span>
+            <span>（*請洽Karen傳道）</span>
           </p>
         </div>
         <div

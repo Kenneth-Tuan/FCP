@@ -1,5 +1,5 @@
 <template>
-  <div class="u-mxauto u-max-w1440px">
+  <div class="u-pt50px">
     <div class="u-w100% u-hmax u-relative u-mb60px">
       <div
         class="u-c-fcp-gray u-absolute u-top-45% u-left-50% u-translate--50%"
@@ -185,7 +185,7 @@
 </template>
 
 <script setup>
-import OnlineElectiveCoursePoster from "@/assets/img/programs/Programs-2.jpg";
+import OnlineElectiveCoursePoster from "@/assets/img/programs/Programs-3.jpg";
 import FCPSubtitle from "@/components/FCPSubtitle.vue";
 import FAQ from "@/components/FAQ.vue";
 import router from "@/router";

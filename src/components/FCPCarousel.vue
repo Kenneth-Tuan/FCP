@@ -1,5 +1,21 @@
+<script setup>
+import { ref } from "vue";
+import banner1 from "@/assets/img/WEB-MAIN.png";
+import banner4 from "@/assets/img/WEB-MAIN-完成使命.png";
+import banner3 from "@/assets/img/WEB-MAIN-看見異象.png";
+import banner2 from "@/assets/img/WEB-MAIN-夥伴同行.png";
+
+const slide = ref(1);
+const bannerList = [
+  { index: 1, img: banner1, targetPage: "Events" },
+  { index: 2, img: banner2, targetPage: "Events" },
+  { index: 3, img: banner3, targetPage: "Events" },
+  { index: 4, img: banner4, targetPage: "Events" },
+];
+</script>
+
 <template>
-  <div class="u-relative u-overflow-hidden">
+  <div class="">
     <!-- <p class="moving-text u-w100%">test test test</p> -->
 
     <q-carousel
@@ -17,32 +33,17 @@
       :navigation="false"
       infinite
       height="max-content"
-      class="u-aspect-ratio-16/9"
     >
       <q-carousel-slide
-        @click="$router.push({ name: 'Events' })"
-        :name="1"
-        :img-src="banner1"
-        class="u-aspect-ratio-16/9 u-cursor-pointer"
-      />
-      <q-carousel-slide
-        @click="$router.push({ name: 'Events' })"
-        :name="2"
-        :img-src="banner2"
-        class="u-aspect-ratio-16/9 u-cursor-pointer"
-      />
-      <q-carousel-slide
-        @click="$router.push({ name: 'Events' })"
-        :name="3"
-        :img-src="banner3"
-        class="u-aspect-ratio-16/9 u-cursor-pointer"
-      />
-      <q-carousel-slide
-        @click="$router.push({ name: 'Events' })"
-        :name="4"
-        :img-src="banner4"
-        class="u-aspect-ratio-16/9 u-cursor-pointer"
-      />
+        v-for="banner in bannerList"
+        @click="$router.push({ name: banner.targetPage })"
+        :name="banner.index"
+        class="u-cursor-pointer u-h100% u-w100% u-p0"
+      >
+        <div class="">
+          <q-img :src="banner.img" />
+        </div>
+      </q-carousel-slide>
     </q-carousel>
 
     <!-- <q-btn
@@ -62,16 +63,6 @@
     </q-btn> -->
   </div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-import banner1 from "@/assets/img/WEB-MAIN.png";
-import banner4 from "@/assets/img/WEB-MAIN-完成使命.png";
-import banner3 from "@/assets/img/WEB-MAIN-看見異象.png";
-import banner2 from "@/assets/img/WEB-MAIN-夥伴同行.png";
-
-const slide = ref(1);
-</script>
 
 <style lang="scss" scoped>
 .moving-text:hover {

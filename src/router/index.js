@@ -8,6 +8,9 @@ import OnlineElectiveCourse from "@/page/Programs/OnlineElectiveCourse.vue";
 import FreeElectiveCourse from "@/page/Programs/FreeElectiveCourse.vue";
 import ContactUs from "@/page/ContactUs/Index.vue";
 import AboutUs from "@/page/About/Index.vue";
+import Search from "@/page/Search/Index.vue";
+import DefaultLayout from "@/layouts/DefaultLayout.vue";
+import SearchLayout from "@/layouts/SearchLayout.vue";
 import { i18n, updateLang } from "@/locales/index";
 
 const {
@@ -40,16 +43,25 @@ const routes = [
         path: "FCP/main",
         name: "Main",
         component: Main,
+        meta: {
+          layout: DefaultLayout,
+        },
       },
       {
         path: "FCP/events",
         name: "Events",
         component: Events,
+        meta: {
+          layout: DefaultLayout,
+        },
       },
       {
         path: "FCP/contact-us",
         name: "ContactUs",
         component: ContactUs,
+        meta: {
+          layout: DefaultLayout,
+        },
       },
       {
         path: "FCP/programs",
@@ -58,21 +70,33 @@ const routes = [
             path: "programs",
             name: "Programs",
             component: Programs,
+            meta: {
+              layout: DefaultLayout,
+            },
           },
           {
             path: "In-Person-Full-Course",
             name: "full_course",
             component: InPersonFullCourse,
+            meta: {
+              layout: DefaultLayout,
+            },
           },
           {
             path: "Online-Elective-Course",
             name: "online_elective_course",
             component: OnlineElectiveCourse,
+            meta: {
+              layout: DefaultLayout,
+            },
           },
           {
             path: "Free-Elective-Course",
             name: "free_elective_course",
             component: FreeElectiveCourse,
+            meta: {
+              layout: DefaultLayout,
+            },
           },
         ],
       },
@@ -80,6 +104,17 @@ const routes = [
         path: "FCP/about-us",
         name: "AboutUs",
         component: AboutUs,
+        meta: {
+          layout: DefaultLayout,
+        },
+      },
+      {
+        path: "FCP/search",
+        name: "Search",
+        component: Search,
+        meta: {
+          layout: SearchLayout,
+        },
       },
     ],
   },
