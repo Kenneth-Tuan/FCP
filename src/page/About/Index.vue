@@ -116,6 +116,7 @@
           animated
           control-color="white"
           navigation
+          swipeable
           padding
           arrows
           height="auto"
@@ -124,46 +125,53 @@
             v-for="menterInfo in mentersInfo"
             :index="menterInfo.tag"
             :name="menterInfo.tag"
-            class="u-w100% u-p0!"
+            class="u-w100% u-p0! u-mxauto"
           >
             <q-card
-              class="u-w100% u-c-fcp-gray u-rounded-12px"
+              class="lg:u-max-w70% sm:u-max-w480px u-mxauto u-c-fcp-gray u-rounded-12px u-flex lg:u-flex-row sm:u-flex-col"
               style="
                 background: radial-gradient(circle, #f2f2f2 0%, #d6dadb 100%);
               "
             >
               <q-card-section>
-                <div class="u-rounded-[0_16px] u-py2%">
+                <div class="u-rounded-[0_16px] u-py2% lg:u-min-w480px">
                   <q-img :src="menterInfo.avatar" :ratio="1" />
                 </div>
-                <span class="u-text-20px u-c-fcp-blue u-fw700">
-                  {{ menterInfo.name }}
-                </span>
               </q-card-section>
 
-              <q-card-section>
-                <div class="text-subtitle2 u-c-fcp-black sm:u-text-12px">
-                  <li v-for="description in menterInfo.descriptions">
-                    {{ description }}
-                  </li>
-                </div>
-              </q-card-section>
-
-              <q-card-section>
-                <div class="u-flex u-flex-row u-items-start">
-                  <q-separator
-                    spaced
-                    inset
-                    vertical
-                    class="u-bg-fcp-yellow u-h100%"
-                    size="2px"
-                  />
-
-                  <p class="sm:u-text-12px u-c-fcp-yellow">
-                    {{ menterInfo.remarks }}
+              <div class="u-flex u-flex-col u-justify-between">
+                <q-card-section>
+                  <p
+                    class="sm:u-text-20px lg:u-text-36px u-c-fcp-blue u-fw700 u-mb8px"
+                  >
+                    {{ menterInfo.name }}
                   </p>
-                </div>
-              </q-card-section>
+                  <div class="u-c-fcp-black lg:u-text-20px sm:u-text-12px">
+                    <li v-for="description in menterInfo.descriptions">
+                      {{ description }}
+                    </li>
+                  </div>
+                </q-card-section>
+
+                <q-card-section>
+                  <div
+                    class="u-flex u-flex-row u-items-start u-flex-nowrap u-justify-start u-flex-gap-x-12px"
+                  >
+                    <q-separator
+                      inset
+                      vertical
+                      class="u-bg-fcp-yellow"
+                      size="2px"
+                    />
+
+                    <p
+                      class="sm:u-text-12px lg:u-text-20px u-c-fcp-yellow u-fw600"
+                    >
+                      {{ menterInfo.remarks }}
+                    </p>
+                  </div>
+                </q-card-section>
+              </div>
             </q-card>
           </q-carousel-slide>
         </q-carousel>
