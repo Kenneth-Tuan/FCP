@@ -8,6 +8,10 @@ import FCP_LOGO from "@/assets/icons/FCP-logo-en.png";
 import FCPBtnDropDown from "@/components/FCPBtnDropDown.vue";
 
 const menuToggle = ref(false);
+
+function redirectPage() {
+  window.location.href = "https://www.frontiers.org.tw/index.php?donate=1";
+}
 </script>
 
 <template>
@@ -155,6 +159,7 @@ const menuToggle = ref(false);
     <q-btn
       flat
       icon="volunteer_activism"
+      @click="redirectPage()"
       :class="{
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
         'md:u-px4px lg:u-px12px': 'spacing',
@@ -290,9 +295,9 @@ const menuToggle = ref(false);
               v-close-popup
             >
               <q-item-section>
-                <q-item-label overline class="u-c-white"
-                  >線上選修班</q-item-label
-                >
+                <q-item-label overline class="u-c-white">
+                  線上選修班
+                </q-item-label>
                 <q-item-label caption class="u-c-white"
                   >Online Elective Course</q-item-label
                 >
