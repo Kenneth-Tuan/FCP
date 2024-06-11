@@ -119,9 +119,27 @@
       <div
         class="u-col-start-2 u-col-span-1 u-flex u-flex-row u-justify-center u-flex-gap-24px"
       >
-        <img :src="LINE" alt="" srcset="" class="u-h-48px u-cursor-pointer" />
-        <img :src="IG" alt="" srcset="" class="u-h-48px u-cursor-pointer" />
-        <img :src="FB" alt="" srcset="" class="u-h-48px u-cursor-pointer" />
+        <img
+          :src="LINE"
+          alt=""
+          srcset=""
+          class="u-h-48px u-cursor-pointer"
+          @click="onClick('https://lin.ee/kRaN0ev')"
+        />
+        <img
+          :src="IG"
+          alt=""
+          srcset=""
+          class="u-h-48px u-cursor-pointer"
+          @click="onClick('https://www.facebook.com/asia.fcp')"
+        />
+        <img
+          :src="FB"
+          alt=""
+          srcset=""
+          class="u-h-48px u-cursor-pointer"
+          @click="onClick('https://www.instagram.com/fcp.asia')"
+        />
       </div>
 
       <div class="u-col-span-1 u-flex u-flex-col u-items-end u-c-gray">
@@ -146,6 +164,10 @@ import LINE from "@/assets/icons/LINE.png";
 import IG from "@/assets/icons/IG.png";
 import FB from "@/assets/icons/FB.png";
 import { COPY_RIGHT } from "@/constants/general.js";
+
+function onClick(url) {
+  window.open(url, "_blank");
+}
 </script>
 
 <style lang="scss" scoped></style>

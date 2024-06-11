@@ -13,8 +13,8 @@ function redirectPage() {
   window.location.href = "https://www.frontiers.org.tw/index.php?donate=1";
 }
 
-function onClick() {
-  window.open("https://forms.gle/En5jj9CVRhn1DFJNA", "_blank");
+function onClick(url) {
+  window.open(url, "_blank");
 }
 </script>
 
@@ -54,7 +54,11 @@ function onClick() {
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
       }"
     >
-      <q-item clickable v-close-popup @click="onClick()">
+      <q-item
+        clickable
+        v-close-popup
+        @click="onClick('https://forms.gle/En5jj9CVRhn1DFJNA')"
+      >
         <q-item-section>
           <q-item-label>一對一</q-item-label>
         </q-item-section>
@@ -380,9 +384,22 @@ function onClick() {
               alt=""
               srcset=""
               class="u-h-48px u-cursor-pointer"
+              @click="onClick('https://lin.ee/kRaN0ev')"
             />
-            <img :src="IG" alt="" srcset="" class="u-h-48px u-cursor-pointer" />
-            <img :src="FB" alt="" srcset="" class="u-h-48px u-cursor-pointer" />
+            <img
+              :src="IG"
+              alt=""
+              srcset=""
+              class="u-h-48px u-cursor-pointer"
+              @click="onClick('https://www.facebook.com/asia.fcp')"
+            />
+            <img
+              :src="FB"
+              alt=""
+              srcset=""
+              class="u-h-48px u-cursor-pointer"
+              @click="onClick('https://www.instagram.com/fcp.asia')"
+            />
           </div>
 
           <div class="u-col-span-1 u-flex u-flex-col u-items-end u-c-gray">

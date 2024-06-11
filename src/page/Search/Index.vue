@@ -145,7 +145,7 @@ const vInputHelper = {
       </template>
     </div>
 
-    <div class="u-grid u-grid-cols-3 u-grid-gap-32px">
+    <!-- <div class="u-grid u-grid-cols-3 u-grid-gap-32px">
       <div class="u-border-1 u-border-solid">
         <div class="u-aspect-ratio-1 u-w300px u-h300px">
           <q-img class="u-h100% u-w100%"></q-img>
@@ -159,7 +159,7 @@ const vInputHelper = {
         >
         <q-separator class="u-bg-fcp-yellow" />
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
