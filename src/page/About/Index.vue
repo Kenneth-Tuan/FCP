@@ -31,16 +31,16 @@ const mentersInfo = [
   },
   {
     tag: 'tsai',
-    name: 'Tsai 牧師',
-    descriptions: ['前線差會訓練中心創辦人暨執行長', '中華福音神學院跨文化宣教博士班研究', '國立政治大學中東、中亞所研究', '為資深宣教士、穆宣訓練專員', '現任中華福音神學院穆光研訓中心主任', '台灣前線差會創辦人暨總幹事'],
-    remarks: '宣教士格言：「為主不保留、不退縮、不後悔。 No Reserves, No Retreats, No Regret.」(Willan W Bordan, 1887 - 1913)',
+    name: '蔡俊杰 牧師',
+    descriptions: ['前線穆宣工人訓練中心校長', '中華福音神學院神學碩士科畢業', '曾任靈糧教牧宣教神學院專任教師(1997-2005)', '花蓮靈糧堂開拓暨現任牧師'],
+    remarks: '宣教士格言：「神只有一個兒子，祂卻使他成了宣教士。而我在地上的志業是搶救靈魂。」David Livingstone, 1813-1873）(Willam W Bordan, 1887-1913)',
     avatar: pastor_tsai
   },
   {
     tag: 'yc',
-    name: 'YC 牧師',
-    descriptions: ['前線差會訓練中心創辦人暨執行長', '中華福音神學院跨文化宣教博士班研究', '國立政治大學中東、中亞所研究', '為資深宣教士、穆宣訓練專員', '現任中華福音神學院穆光研訓中心主任', '台灣前線差會創辦人暨總幹事'],
-    remarks: '宣教士格言：「為主不保留、不退縮、不後悔。 No Reserves, No Retreats, No Regret.」(Willan W Bordan, 1887 - 1913)',
+    name: 'YC亞馳 牧師／博士',
+    descriptions: ['台灣前線差會海外部主任', '建築學士、MBA、教育腦神經科學博士', '心理諮詢師、企業領航教練'],
+    remarks: '於2009年開始全職跨文化宣教事工，主要負擔為創啟地區之「未得之民、未得之地」的開荒及植堂。其先後於東南亞，中國西南部和中東等地服事，從營商、教育和NGO管道進入社區，建立關係和推動事工。',
     avatar: pastor_yc
   },
 ]
@@ -71,14 +71,15 @@ const oneOnOneConsultationDescription = `穆宣禾場遍佈全球、極為龐大
         />
 
         <p class="u-c-fcp-black md:u-text-24px md:u-px60px u-mb36px">
-          團隊事奉在穆宣場域多年，兩件重要的事呈現在眼前：一是穆宣禾場真的極為龐大，而19億穆斯林的禾場正在經歷聖靈大能的作為，一波波穆斯林歸主浪潮正在發生著，許多穆斯林渴望歸向基督。但另一件挑戰是，莊稼熟了卻缺少收割莊稼的工人
+          團隊事奉在穆宣場域多年，兩件重要的事呈現在眼前：一是穆宣禾場真的極為龐大，而19億穆斯林的禾場正在經歷聖靈大能的作為，一波波穆斯林歸主浪潮正在發生著，許多穆斯林渴望歸向基督。但另一件挑戰是，莊稼熟了卻缺少收割莊稼的工人。
+          <br />五年前開始跟神禱告，求主賜給我們一個可以培訓穆宣工人的訓練中心，不斷地禱告，不間斷的預備，終於，在2023年神開始啟動成就這事，我們不是做我們想做的事，而是要做神啟動的事。2024年「前線穆宣工人訓練中心」要正式運作，求主打發願意接受裝備、預備自己進入穆宣禾場的工人，一同參與成就神在穆民中的美好心意。
         </p>
 
         <div class="u-mxauto u-rounded-24px u-overflow-hidden">
           <div class="u-aspect-ratio-16/9">
             <iframe
               class="u-w100% u-h100%"
-              src="https://www.youtube.com/embed/WYcpL6otp_Y?si=8PJRSTvCQi72Gcs2"
+              src="https://www.youtube.com/embed/MwWGuNEtp98?si=hD_umUl9FEBSLcWv"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -145,14 +145,21 @@ const vInputHelper = {
       </template>
     </div>
 
-    <!-- <div
-      class="u-w100% u-h100% u-absolute u-z--1 u-bg-#3e3e4099 u-bg-blend-multiply"
-    ></div>
-    <q-img
-      class="u-absolute u-top-0 u-left-0 u-z--2"
-      :src="Poster"
-      :ratio="16 / 9"
-    /> -->
+    <div class="u-grid u-grid-cols-3 u-grid-gap-32px">
+      <div class="u-border-1 u-border-solid">
+        <div class="u-aspect-ratio-1 u-w300px u-h300px">
+          <q-img class="u-h100% u-w100%"></q-img>
+        </div>
+        <q-btn
+          outline
+          rounded
+          push
+          class="u-border-color-fcp-yellow! u-mxauto"
+          >{{ `Read Post | 閱讀更多` }}</q-btn
+        >
+        <q-separator class="u-bg-fcp-yellow" />
+      </div>
+    </div>
   </div>
 </template>
 
