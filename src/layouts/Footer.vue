@@ -131,14 +131,14 @@
           alt=""
           srcset=""
           class="u-h-48px u-cursor-pointer"
-          @click="onClick('https://www.facebook.com/asia.fcp')"
+          @click="onClick('https://www.instagram.com/fcp.asia')"
         />
         <img
           :src="FB"
           alt=""
           srcset=""
           class="u-h-48px u-cursor-pointer"
-          @click="onClick('https://www.instagram.com/fcp.asia')"
+          @click="onClick('https://www.facebook.com/asia.fcp')"
         />
       </div>
 
