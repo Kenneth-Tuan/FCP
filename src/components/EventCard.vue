@@ -8,7 +8,7 @@
         'u-w100% u-hmax u-rounded-[35px_0_0_0]': 'shape',
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
       },
-      'u-bg-fcp-gray',
+      'u-bg-fcp-gray u-group u-relative',
     ]"
   >
     <div class="u-c-black u-w20%">
@@ -61,6 +61,21 @@
         </p>
       </div>
     </div>
+
+    <div
+      class="u-bg-fcp-black u-absolute u-bottom-0 u-left-0 u-c-white u-w100% u-text-center"
+      :class="{
+        ' group-hover:u-opacity-100 u-transition-all u-duration-300ms u-ease-in-out u-opacity-0':
+          'animation',
+      }"
+    >
+      <span
+        class="u-font-unbounded u-text-18px u-tracking-0.2em u-fw600 u-cursor-pointer"
+        @click="onClick()"
+      >
+        Book Now | 點我報名
+      </span>
+    </div>
   </div>
 </template>
 
@@ -70,6 +85,13 @@ const props = defineProps({
   description: String,
   location: String,
 });
+
+function onClick() {
+  window.open(
+    "https://docs.google.com/forms/d/e/1FAIpQLSddWqVXJ46cZXzqjJMwoDd7f50HVPkcCsJuAb5R_ZxKeNDKPw/viewform?usp=send_form",
+    "_blank"
+  );
+}
 </script>
 
 <style lang="scss" scoped></style>

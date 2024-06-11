@@ -20,8 +20,18 @@
           class="u-mb36px"
         />
         <div class="u-flex u-justify-center u-flex-wrap u-flex-gap-5%">
-          <PostCard />
-          <PostCard />
+          <PostCard
+            :type="'招生資訊'"
+            :title="'2024第一屆招生正式開跑'"
+            :description="'如果你已經領受穆宣異象，但還沒有接受過穆宣培訓，歡迎加入這個專為穆宣及你「量身打造」的專業培訓計畫！'"
+            :url="'https://drive.google.com/file/d/1dT0pKorUHGXt3QVs8DGOu9Ms5GlbBgqj/view?usp=sharing'"
+          />
+          <PostCard
+            type="禱告資源"
+            title="《frontiers 30+》 2024年度齋戒月禱告指南"
+            description="如今年手冊收錄兩個30天系列禱告：第一系列齋戒月30天「敲開城市大門」禱告，第二系列朝覲期30天「遇見耶穌」禱告，透過這本禱告指..."
+            :url="'https://www.30dayschinese.org/'"
+          />
         </div>
       </div>
 
@@ -32,10 +42,10 @@
           class="u-mb36px"
         />
         <div class="u-flex u-flex-col u-flex-gap-y-16px">
-          <EventCard @click="onClick()" />
-          <EventCard @click="onClick()" />
-          <EventCard @click="onClick()" />
-          <EventCard @click="onClick()" />
+          <EventCard />
+          <EventCard />
+          <EventCard />
+          <EventCard />
         </div>
       </div>
 
@@ -79,13 +89,6 @@ import PostCard from "@/components/PostCard.vue";
 import Banner from "@/assets/img/events/events_page.png";
 import EventCard from "@/components/EventCard.vue";
 import FCPButton from "@/components/FCPButton.vue";
-
-function onClick() {
-  window.open(
-    "https://docs.google.com/forms/d/e/1FAIpQLSddWqVXJ46cZXzqjJMwoDd7f50HVPkcCsJuAb5R_ZxKeNDKPw/viewform?usp=send_form",
-    "_blank"
-  );
-}
 </script>
 
 <style lang="scss" scoped></style>

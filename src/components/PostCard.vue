@@ -12,7 +12,10 @@
             'animation',
         }"
       >
-        <span class="u-font-unbounded u-text-36px u-tracking-0.2em">
+        <span
+          class="u-font-unbounded u-text-36px u-tracking-0.2em"
+          @click="onClick('https://www.30dayschinese.org/')"
+        >
           Read Post
         </span>
       </div>
@@ -45,7 +48,12 @@ const props = defineProps({
   type: String,
   title: String,
   description: String,
+  url: String,
 });
+
+function onClick() {
+  window.open(props.url, "_blank");
+}
 </script>
 
 <style lang="scss" scoped>
