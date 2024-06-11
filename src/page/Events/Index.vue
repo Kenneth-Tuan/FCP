@@ -32,10 +32,10 @@
           class="u-mb36px"
         />
         <div class="u-flex u-flex-col u-flex-gap-y-16px">
-          <EventCard />
-          <EventCard />
-          <EventCard />
-          <EventCard />
+          <EventCard @click="onClick()" />
+          <EventCard @click="onClick()" />
+          <EventCard @click="onClick()" />
+          <EventCard @click="onClick()" />
         </div>
       </div>
 
@@ -79,6 +79,13 @@ import PostCard from "@/components/PostCard.vue";
 import Banner from "@/assets/img/events/events_page.png";
 import EventCard from "@/components/EventCard.vue";
 import FCPButton from "@/components/FCPButton.vue";
+
+function onClick() {
+  window.open(
+    "https://docs.google.com/forms/d/e/1FAIpQLSddWqVXJ46cZXzqjJMwoDd7f50HVPkcCsJuAb5R_ZxKeNDKPw/viewform?usp=send_form",
+    "_blank"
+  );
+}
 </script>
 
 <style lang="scss" scoped></style>

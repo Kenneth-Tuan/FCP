@@ -46,6 +46,9 @@ const mentersInfo = [
 ]
 
 const oneOnOneConsultationDescription = `穆宣禾場遍佈全球、極為龐大、不同的區域使用的語言、文化、處境都有所不同，每一位穆宣工人的呼召使命與需要面對的文化處境也不同，因此所需要的預備也不盡相同；FCP希望能幫助已領受穆宣異象的您，找到最合適您量身訂製回應呼召的下一步計畫。一對一諮詢服務，不僅讓我們彼此更認識，同時能共同了解FCP訓練是否是現階段最適合您的培訓計畫。`
+function onClick() {
+  window.open('https://forms.gle/En5jj9CVRhn1DFJNA', '_blank')
+}
 </script>
 
 <template>
@@ -236,6 +239,7 @@ const oneOnOneConsultationDescription = `穆宣禾場遍佈全球、極為龐大
         class="u-bg-fcp-green u-c-fcp-gray u-rounded-[30px_0] u-px24px!"
         icon-right="touch_app"
         noCaps
+        @click="onClick()"
       >
         <p class="u-text-left">
           <span class="u-fw700 u-tracking-0.2em u-text-18px"

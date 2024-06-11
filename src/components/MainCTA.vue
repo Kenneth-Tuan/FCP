@@ -31,7 +31,13 @@ import CTA from "@/assets/img/CTA-image.png";
       </div>
     </q-btn> -->
     <div class="u-absolute u-z-1 u-bottom-1% u-left-50% u-translate--50%">
-      <q-btn rounded push padding="10px 24px" class="u-backdrop-blur-10">
+      <q-btn
+        rounded
+        push
+        padding="10px 24px"
+        class="u-backdrop-blur-10"
+        @click="$router.push({ name: 'full_course' })"
+      >
         <p
           class="lg:u-text-36px lg:u-lh-36px sm:u-text-18px u-font-bold u-c-white u-text-nowrap"
         >

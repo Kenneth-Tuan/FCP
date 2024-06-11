@@ -12,6 +12,10 @@ const menuToggle = ref(false);
 function redirectPage() {
   window.location.href = "https://www.frontiers.org.tw/index.php?donate=1";
 }
+
+function onClick() {
+  window.open("https://forms.gle/En5jj9CVRhn1DFJNA", "_blank");
+}
 </script>
 
 <template>
@@ -50,7 +54,7 @@ function redirectPage() {
         'u-transition-all u-duration-300ms u-ease-in-out': 'animation',
       }"
     >
-      <q-item clickable v-close-popup>
+      <q-item clickable v-close-popup @click="onClick()">
         <q-item-section>
           <q-item-label>一對一</q-item-label>
         </q-item-section>

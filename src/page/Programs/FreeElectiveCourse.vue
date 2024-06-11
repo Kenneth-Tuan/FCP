@@ -190,6 +190,10 @@ import FCPSubtitle from "@/components/FCPSubtitle.vue";
 import FAQ from "@/components/FAQ.vue";
 import router from "@/router";
 import { scrollToSpecificTag } from "@/utils/misc.js";
+
+function onClick() {
+  window.open("https://forms.gle/7xnFdwpK7BYwUAnU9", "_blank");
+}
 </script>
 
 <style lang="scss" scoped></style>
