@@ -42,7 +42,7 @@
           title="專業師資團隊"
           subtitle="Teachers"
           :image="Teachers_image"
-          routeTargetName="teachers"
+          routeTargetName="AboutUs"
         >
           <template #description>
             <p
